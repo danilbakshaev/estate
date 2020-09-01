@@ -554,8 +554,6 @@ img {
   opacity: .8;
 }
 
-.header__menu {}
-
 .header__link {
   text-decoration: none;
   color: #fff;
@@ -691,6 +689,12 @@ img {
 
   .btn--menu {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .btn {
+    width: 100% !important;
   }
 }
 
@@ -835,5 +839,146 @@ img {
 
   .callback-title {
     margin-bottom: 40px;
+  }
+}
+
+/* coop */
+
+.coop {
+  margin-top: 200px;
+}
+
+.title-h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.coop__inner {
+  margin-top: 80px;
+  margin-bottom: 75px;
+  display: flex;
+  margin-right: -77px;
+}
+
+.coop__item {
+  width: calc(100% - 77px);
+  margin-right: 77px;
+}
+
+.border-green {
+  position: relative;
+  padding-left: 29px;
+}
+
+.border-green::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  border-left: 0.5px solid #25BD46;
+  height: 100%;
+}
+
+.btn--coop {
+  width: 289px;
+  height: 39px;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .coop {
+    margin-top: 110px;
+  }
+
+  .title-h2 {
+    font-size: 30px;
+  }
+
+  .coop__inner {
+    margin: 0 0 40px;
+    flex-direction: column;
+  }
+
+  .coop__item {
+    margin-top: 40px;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .coop__item::before {
+    content: none;
+  }
+}
+
+/* prop */
+
+.prop {
+  margin-top: 185px;
+}
+
+.title-h2--prop {
+  margin-bottom: 34px;
+}
+
+.title-h2--green {
+  color: #25BD46;
+  margin: 0;
+}
+
+.prop__inner {
+  margin-top: 90px;
+  background: url(/img/bg/bg-prop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.prop-text {
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 630px;
+  margin: 0;
+}
+
+.prop-text--24 {
+  font-size: 24px;
+  max-width: 525px;
+  margin: 35px 0 50px;
+}
+
+.btn--prop {
+  margin-top: 75px;
+  width: 326px;
+  height: 39px;
+}
+
+@media screen and (max-width: 1080px) {
+  .prop {
+    margin-top: 80px;
+  }
+
+  .title-h2--prop {
+    margin: 0;
+  }
+
+  .prop__inner {
+    margin-top: 30px;
+    background: none;
+  }
+
+  .prop-text {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .prop-text--24 {
+    margin: 40px 0;
+    font-size: 20px;
+  }
+
+  .btn--prop {
+    margin-top: 40px;
   }
 }
