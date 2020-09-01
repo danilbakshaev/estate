@@ -842,6 +842,134 @@ img {
   }
 }
 
+/* save */
+
+.save{
+  background: #000525;
+  margin-top: 200px;
+}
+
+.save__item{
+  display: flex!important;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #25BD46;
+  background: inherit;
+  padding-bottom: 67px;
+}
+.save__left{
+  width: 40%;
+}
+.save__right{
+  width: 40%;
+}
+.save__text-left{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+.save__text-right{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #DDE2F0;
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.slick-dots button{
+  width: 108px;
+  height: 1px;
+  font-size: 0px;
+  margin-right: 15px;
+  border: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.slick-dots .slick-active button{
+  height: 9px;
+  border-radius: 30px;
+  background: #FFFFFF;
+}
+
+@media screen and (max-width: 1080px) {
+  .save__item{
+    border: none;
+    margin-right: 50px;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  .save__text-left{
+    border-bottom: 0.5px solid #25BD46;
+    padding-bottom: 28px;
+    min-height: 225px;
+  }
+  .save__left{
+    width: 100%;
+  }
+  .save__right{
+    width: 100%;
+  }
+}
+
+
+/* ques */
+
+.ques{
+  margin-top: 150px;
+}
+.ques__item{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 66px;
+}
+.ques__text{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+  color: #E6EDFF;
+  padding-bottom: 20px;
+  margin: 0;
+}
+.ques__subtext{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #E6EDFF;
+  margin-left: 100px;
+}
+.ques__item-top{
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 0.5px solid #25BD46;
+}
+.ques__svg{
+  margin-right: 80px;
+  padding-bottom: 20px;
+}
+.ques__svg--margin35{
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1080px) {
+  .ques__svg{
+    display: none;
+  }
+  .ques__subtext{
+    margin-left: 0px;
+  }
+}
+
 /* coop */
 
 .coop {
