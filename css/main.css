@@ -779,8 +779,6 @@ img {
   padding: 0 24px;
 }
 
-.btn {}
-
 .btn--form {
   margin-bottom: 34px;
   width: 100%;
@@ -793,8 +791,6 @@ img {
   line-height: 150%;
   color: #FFFFFF;
 }
-
-.callback-privacy--link {}
 
 @media screen and (max-width: 1080px) {
   .managment {
@@ -840,39 +836,4 @@ img {
   .callback-title {
     margin-bottom: 40px;
   }
-
-  /* .managment-text__wrap {
-    flex-direction: column;
-    margin: 33px 0;
-  }
-
-  .managment-text {
-    position: relative;
-    padding-bottom: 45px;
-  }
-
-  .managment-text:after {
-    content: '';
-    position: absolute;
-    border-bottom: 1px solid #E6E6E6;
-    width: 166px;
-    bottom: 0;
-    left: 0;
-  }
-
-  .managment-text__wrap-item:last-child {
-    padding-top: 45px;
-  }
-
-  .managment__inner::after {
-    content: none;
-  }
-
-  .text-p__24 {
-    font-size: 16px;
-  }
-
-  .text-p--green {
-    font-size: 15px;
-  } */
 }
