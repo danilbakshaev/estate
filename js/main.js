@@ -1,5 +1,42 @@
 $(function() {
 
+  // $('#whitePianino').slick({
+//   slidesToShow: 3
+// });
+$(window).on('resize', function(e){
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $(".card-box").data('init-slider');
+  // Если мобильный
+  if(window.innerWidth < 1080){
+    // Если слайдер не запущен
+    if(init != 1){
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('#saveSlider').slick({
+        arrows: false,
+        prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
+        dots: true,
+        infinite: false,
+        slidesToShow: 1.5,
+        responsive: [{
+          breakpoint: 740,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1,
+          },
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+      }).data({'init-slider': 1});
+    }
+  }
+}).trigger('resize');
+
 	//Валидатор форм и маска для форм
 	const offerFormModal = $('.offer-form-modal')
 	offerFormModal.submit(function(e) {
