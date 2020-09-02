@@ -33,6 +33,14 @@ $(window).on('resize', function(e){
         },
       ]
       }).data({'init-slider': 1});
+      $('.control-slider').slick({
+        arrows: false,
+        prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
+        dots: true,
+        infinite: false,
+        slidesToShow: 1
+      }).data({'init-slider': 1});
     }
   }
 }).trigger('resize');
