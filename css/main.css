@@ -920,7 +920,8 @@ img {
     min-height: 100px;
     font-size: 20px;
   }
-  .save__text-right{
+
+  .save__text-right {
     font-size: 16px;
   }
 
@@ -1138,28 +1139,33 @@ img {
 
 /* object */
 
-.object{
+.object {
   margin-top: 200px;
 }
-.object__items{
+
+.object__items {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
 }
-.object__item{
+
+.object__item {
   display: flex;
   flex-direction: column;
   width: 25.33%;
 }
-.object__item-top{
+
+.object__item-top {
   min-height: 92px;
   display: flex;
   align-items: flex-end;
 }
-.object__svg{
+
+.object__svg {
   margin-right: 20px;
 }
-.object__text{
+
+.object__text {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1168,54 +1174,64 @@ img {
   color: #D7DDEE;
   margin-top: 38px;
 }
-.title-h2--object{
+
+.title-h2--object {
   font-size: 40px;
 }
 
 @media screen and (max-width: 1080px) {
-  .object__items{
+  .object__items {
     flex-direction: column;
     margin-top: 0;
   }
-  .object__item{
+
+  .object__item {
     width: inherit;
   }
-  .object__text{
+
+  .object__text {
     font-size: 16px;
     margin-left: 48px;
   }
-  .title-h2--object{
+
+  .title-h2--object {
     font-size: 30px;
-  }  
+  }
 }
 
 
 /* call */
 
-.call{
+.call {
   margin-top: 190px;
 }
-.call__form{
+
+.call__form {
   display: flex;
   justify-content: space-between;
 }
-.callback-input--mod{
+
+.callback-input--mod {
   margin-bottom: 0;
   width: 386px;
   margin-right: 64px;
 }
-.btn{
+
+.btn {
   width: 386px;
 }
-.call__wrap{
+
+.call__wrap {
   margin-top: 62px;
 }
-.call__wrap-bottom-item{
+
+.call__wrap-bottom-item {
   display: flex;
   margin-bottom: 64px;
   align-items: center;
 }
-.call__text{
+
+.call__text {
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1223,22 +1239,27 @@ img {
   letter-spacing: 0.03em;
   color: #FFFFFF;
 }
-.call__wrap-bottom-item:last-child{
+
+.call__wrap-bottom-item:last-child {
   border-bottom: 1px solid #FFFFFF;
   margin: 0;
   padding-bottom: 64px;
 }
-.call__text{
+
+.call__text {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 49px;
 }
-.call__wrap-bottom{
+
+.call__wrap-bottom {
   margin-top: 141px;
 }
-.call__svg--marginLeft4{
+
+.call__svg--marginLeft4 {
   margin-left: 4px;
 }
+
 /* 
 .left-svg{
   display: flex;
@@ -1246,31 +1267,37 @@ img {
 } */
 
 @media screen and (max-width: 1080px) {
-  .call__form{
+  .call__form {
     flex-direction: column;
     align-items: flex-start;
   }
-  .callback-input--mod{
+
+  .callback-input--mod {
     margin-right: 0;
     margin-bottom: 47px;
   }
-  .btn--mod{
+
+  .btn--mod {
     height: 39px;
     width: 438px;
   }
-  .title-h2--call{
+
+  .title-h2--call {
     font-size: 40px;
   }
-  .call__text{
+
+  .call__text {
     font-size: 20px;
   }
-  .call__wrap-bottom{
+
+  .call__wrap-bottom {
     margin-top: 110px;
   }
 }
+
 @media screen and (max-width: 860px) {
-  .btn--mod{
-    width: 438px!important;
+  .btn--mod {
+    width: 438px !important;
   }
 }
 
@@ -1570,5 +1597,74 @@ img {
 
   .control__wrap {
     margin-bottom: 0;
+  }
+}
+
+/* footer */
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 0;
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 17px 0 0;
+}
+
+.footer__text--link {
+  color: #fff;
+  text-decoration-skip-ink: none;
+  transition: all .2s linear;
+}
+
+.footer__text--link:hover {
+  opacity: .8;
+}
+
+.footer__text--kdm {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .footer__inner {
+    flex-direction: column;
+    padding: 35px 0;
+  }
+
+  .footer__item--1 {
+    order: 1;
+  }
+
+  .footer__item--2 {
+    order: 2;
+  }
+
+  .footer__item--3 {
+    order: 3;
+  }
+
+  .footer__item--4 {
+    order: 4;
+    flex-direction: unset;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__text--first {
+    margin-top: 28px;
+  }
+
+  .footer__text {
+    margin-top: 35px;
   }
 }
