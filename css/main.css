@@ -1232,6 +1232,7 @@ img {
   line-height: 130%;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+  text-decoration: none;
 }
 
 .call__wrap-bottom-item:last-child {
@@ -2111,6 +2112,12 @@ margin-left: 0;
 
 .title-h3--deal{
   margin-top: 32px;
+}
+
+.btn--widthAuto{
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 1080px) {
