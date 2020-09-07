@@ -2293,13 +2293,11 @@ img {
     margin-bottom: 0;
   }
 
-  .ques__item-top--legal {}
 
   .ques__text--legal {
     font-size: 20px;
   }
 
-  .ques__text--legal::after {}
 
   .ques__subtext--legal {
     font-size: 16px;
@@ -2695,7 +2693,6 @@ img {
     margin-right: 0;
   }
 
-  .prep__text {}
 }
 
 /* move */
