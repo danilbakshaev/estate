@@ -875,6 +875,10 @@ img {
     font-size: 18px;
   }
 
+  .managment-text--fz {
+    font-size: 16px;
+  }
+
   .managment-text--border {
     padding-bottom: 45px;
     position: relative;
@@ -919,18 +923,8 @@ img {
 }
 
 @media screen and (max-width: 375px) {
-
-  .managment__item-texts {
-    flex-direction: column;
-  }
-
   .managment-text--green {
     padding-top: 0;
-  }
-
-  .managment-text--numb {
-    padding: 40px 0 20px;
-    margin-right: 0;
   }
 }
 
@@ -1035,6 +1029,7 @@ img {
 
   .save__right {
     width: 100%;
+    padding-top: 36px;
   }
 
   .save {
@@ -1503,6 +1498,10 @@ img {
 
   .call__wrap-bottom {
     margin-top: 110px;
+  }
+
+  .call {
+    margin-top: 77px;
   }
 }
 
@@ -1982,7 +1981,7 @@ img {
 
 .animation-svg--rent {
   bottom: unset;
-  top: 0;
+  top: 20px;
 }
 
 .rent__item {
@@ -2214,7 +2213,7 @@ img {
   }
 
   .rent-list__text {
-    padding-top: 0;
+    padding-top: 35px;
   }
 
   .rent__text--green {
@@ -2368,16 +2367,16 @@ img {
   margin-left: 42px;
 }
 
-.managment__item-texts--margin0{
+.managment__item-texts--margin0 {
   margin: 0;
   flex-wrap: wrap;
 }
 
-.deal__subtext--text-item{
+.deal__subtext--text-item {
   max-width: 278px;
 }
 
-.deal__subtext--text-item-one{
+.deal__subtext--text-item-one {
   max-width: 214px;
 }
 
@@ -2388,7 +2387,7 @@ img {
   .save__text-right--margin0 {
     margin-top: 36px;
   }
-  
+
 }
 
 @media screen and (max-width: 992px) {
@@ -2398,7 +2397,7 @@ img {
 }
 
 @media screen and (max-width: 755px) {
-  .deal__subtext--max756{
+  .deal__subtext--max756 {
     margin: 0;
     /* margin-top: 33px; */
   }
@@ -2406,7 +2405,7 @@ img {
 
 /* work */
 
-.work{
+.work {
   margin-top: 110px;
 }
 
@@ -2424,7 +2423,7 @@ img {
     margin-top: 87px;
   }
 
-  .work__text{
+  .work__text {
     font-size: 24px;
   }
 }
@@ -2689,7 +2688,7 @@ img {
   background: none;
 }
 
-.move__inner--mod{
+.move__inner--mod {
   max-width: 100%;
 }
 
@@ -2735,13 +2734,13 @@ img {
   margin: 0;
 }
 
-.mark-svg{
+.mark-svg {
   width: 30px;
   margin-right: 11px;
   margin-top: 6px;
 }
 
-.marketing__item--mod{
+.marketing__item--mod {
   display: flex;
   align-items: flex-start;
   font-style: normal;
@@ -2751,23 +2750,23 @@ img {
   color: #E6EDFF;
 }
 
-.marketing__wrapper-item{
+.marketing__wrapper-item {
   margin-bottom: 42px;
   position: relative;
 }
 
-.marketing__wrapper-item-inner{
+.marketing__wrapper-item-inner {
   position: relative;
 }
 
-.marketing__wrapper-item:first-child{
+.marketing__wrapper-item:first-child {
   margin-top: 61px;
 }
 
-.marketing__item--marginBorder{
+.marketing__item--marginBorder {
   margin-top: 20px;
   border-left: 0.5px solid #25BD46;
-  padding-left: 14px!important;
+  padding-left: 14px !important;
   margin-bottom: 111px;
   font-style: normal;
   font-weight: normal;
@@ -2776,15 +2775,16 @@ img {
   color: #E6EDFF;
 }
 
-.title-h2--padding0{
+.title-h2--padding0 {
   max-width: 100%;
 }
 
-.mark-svg-right{
+.mark-svg-right {
   position: absolute;
   top: 0%;
   right: 0;
 }
+
 /* .marketing__wrapper-mod{
   display: none;
 } */
@@ -2819,21 +2819,16 @@ img {
     max-width: 100%;
   }
 
-
-  .marketing__inner{
-    display: none;
-  }
-
-  .title-h2--padding0{
+  .title-h2--padding0 {
     padding: 0;
     border: none;
   }
 
-  .marketing__item--marginBorder{
+  .marketing__item--marginBorder {
     margin-bottom: 60px;
   }
 
-  .mark-svg-right{
+  .mark-svg-right {
     display: none;
   }
 
@@ -2928,22 +2923,22 @@ img {
   margin-top: 85px;
 }
 
-.managment-text--mod{
+.managment-text--mod {
   margin: 0;
   font-size: 60px;
   line-height: 100%;
 }
 
-.btn--mod{
+.btn--mod {
   width: 286px;
 }
 
-.stage-item__text--block{
+.stage-item__text--block {
   display: none;
 }
 
 @media screen and (max-width: 1400px) {
-  .stage__inner{
+  .stage__inner {
     align-items: flex-end;
   }
 }
@@ -2990,19 +2985,21 @@ img {
     font-size: 16px;
   }
 
-  .btn-stage {
-    width: 100%;
-  }
-  .stage-item__text--dispNone{
+  .stage-item__text--dispNone {
     display: none;
   }
 
-  .stage-item__text--block{
+  .stage-item__text--block {
     display: block;
   }
 
-  .btn--mod{
-    margin-top: 61px;
+  .btn--mod {
+    width: 436px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-stage {
     width: 100%;
   }
 }
@@ -3026,15 +3023,16 @@ img {
     width: 100%;
     margin-right: 0;
   }
-  .control__img{
-    display: none!important;
+
+  .control__img {
+    display: none !important;
   }
 
-  .control__left--dispNone{
+  .control__left--dispNone {
     display: none;
   }
 
-  .control{
+  .control {
     margin-top: 102px;
   }
 }
@@ -3045,30 +3043,36 @@ img {
 .animate-1 circle {
   opacity: 0;
 }
+
 .animate-1 .bounce-1 {
   animation: bounce 0.4s;
   animation-fill-mode: forwards;
 }
+
 .animate-1 .bounce-2 {
   animation: bounce 0.4s;
   animation-delay: 0.1s;
   animation-fill-mode: forwards;
 }
+
 .animate-1 .bounce-3 {
   animation: bounce 0.4s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
+
 .animate-1 .bounce-4 {
   animation: bounce 0.4s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
+
 .animate-1 .bounce-5 {
   animation: bounce 0.4s;
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
+
 .animate-1 .bounce-6 {
   animation: bounce 0.4s;
   animation-delay: 0.5s;
@@ -3080,190 +3084,228 @@ img {
 .animate-2 rect {
   opacity: 0;
 }
+
 .animate-2 .bounce-1 {
   animation: bounce 0.4s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-2 {
   animation: bounce 0.4s;
   animation-delay: 0.03s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-3 {
   animation: bounce 0.4s;
   animation-delay: 0.06s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-4 {
   animation: bounce 0.4s;
   animation-delay: 0.09s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-5 {
   animation: bounce 0.4s;
   animation-delay: 0.12s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-6 {
   animation: bounce 0.4s;
   animation-delay: 0.15s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-7 {
   animation: bounce 0.4s;
   animation-delay: 0.18s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-8 {
   animation: bounce 0.4s;
   animation-delay: 0.21s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-9 {
   animation: bounce 0.4s;
   animation-delay: 0.24s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-10 {
   animation: bounce 0.4s;
   animation-delay: 0.27s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-11 {
   animation: bounce 0.4s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-12 {
   animation: bounce 0.4s;
   animation-delay: 0.33s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-13 {
   animation: bounce 0.4s;
   animation-delay: 0.36s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-14 {
   animation: bounce 0.4s;
   animation-delay: 0.39s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-15 {
   animation: bounce 0.4s;
   animation-delay: 0.42s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-16 {
   animation: bounce 0.4s;
   animation-delay: 0.45s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-17 {
   animation: bounce 0.4s;
   animation-delay: 0.48s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-18 {
   animation: bounce 0.4s;
   animation-delay: 0.51s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-19 {
   animation: bounce 0.4s;
   animation-delay: 0.54s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-20 {
   animation: bounce 0.4s;
   animation-delay: 0.57s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-21 {
   animation: bounce 0.4s;
   animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-22 {
   animation: bounce 0.4s;
   animation-delay: 0.63s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-23 {
   animation: bounce 0.4s;
   animation-delay: 0.66s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-24 {
   animation: bounce 0.4s;
   animation-delay: 0.69s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-25 {
   animation: bounce 0.4s;
   animation-delay: 0.72s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-26 {
   animation: bounce 0.4s;
   animation-delay: 0.75s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-27 {
   animation: bounce 0.4s;
   animation-delay: 0.78s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-28 {
   animation: bounce 0.4s;
   animation-delay: 0.81s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-29 {
   animation: bounce 0.4s;
   animation-delay: 0.84s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-30 {
   animation: bounce 0.4s;
   animation-delay: 0.87s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-31 {
   animation: bounce 0.4s;
   animation-delay: 0.90s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-32 {
   animation: bounce 0.4s;
   animation-delay: 0.93s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-33 {
   animation: bounce 0.4s;
   animation-delay: 0.96s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-34 {
   animation: bounce 0.4s;
   animation-delay: 0.99s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-35 {
   animation: bounce 0.4s;
   animation-delay: 1.02s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-36 {
   animation: bounce 0.4s;
   animation-delay: 1.05s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .bounce-37 {
   animation: bounce 0.4s;
   animation-delay: 1.08s;
   animation-fill-mode: forwards;
 }
+
 .animate-2 .swipe-1 {
   animation: swipe-left 0.4s;
   animation-delay: 1.11s;
@@ -3275,6 +3317,7 @@ img {
 .animate-3 rect {
   opacity: 0;
 }
+
 .animate-3 .bounce-1 {
   animation: bounce 0.7s;
   animation-fill-mode: forwards;
@@ -3285,6 +3328,7 @@ img {
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
+
 .animate-3 .arrow-2 {
   animation: arrow-bottom 0.4s;
   animation-delay: 0.2s;
@@ -3299,18 +3343,21 @@ img {
     transform: translate(50%, 50%);
     opacity: 0;
   }
+
   50% {
     opacity: 0.3;
     r: 11;
     rx: 11;
     ry: 11;
   }
+
   75% {
     opacity: 1;
     r: 9;
     rx: 9;
     ry: 9;
   }
+
   100% {
     opacity: 1;
     r: 10;
@@ -3326,18 +3373,21 @@ img {
     ry: 1;
     transform: translate(50%, 50%);
   }
+
   50% {
     opacity: 0.3;
     r: 11;
     rx: 11;
     ry: 11;
   }
+
   75% {
     opacity: 1;
     r: 9;
     rx: 9;
     ry: 9;
   }
+
   100% {
     opacity: 1;
     r: 10;
@@ -3350,13 +3400,16 @@ img {
   0% {
     transform: translateX(300px);
   }
+
   50% {
     transform: translateX(-50px);
   }
+
   75% {
     opacity: 1;
     transform: translateX(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0px);
@@ -3369,17 +3422,20 @@ img {
     rx: 1;
     ry: 1;
   }
+
   50% {
     r: 11;
     rx: 11;
     ry: 11;
   }
+
   75% {
     opacity: 1;
     r: 9;
     rx: 9;
     ry: 9;
   }
+
   100% {
     opacity: 1;
     r: 10;
@@ -3387,7 +3443,3 @@ img {
     ry: 10;
   }
 }
-
-
-  
-
