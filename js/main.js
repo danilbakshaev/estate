@@ -50,9 +50,9 @@ $(function () {
           infinite: false,
           slidesToShow: 2,
           responsive: [{
-            breakpoint: 740,
+            breakpoint: 690,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 1.2,
               slidesToScroll: 1,
             }
           }, ]
@@ -64,45 +64,87 @@ $(function () {
   }).trigger('resize');
 
   //Валидатор форм и маска для форм
-  const offerFormModal = $('.offer-form-modal')
-  offerFormModal.submit(function (e) {
-    e.preventDefault()
-  })
+  if ('.callback-form') {
+    const callbackForm = $('.callback-form')
+    callbackForm.submit(function (e) {
+      e.preventDefault()
+    })
 
-  offerFormModal.validate({
-    errorElement: "",
-    errorPlacement: (error, element) =>
-      error.appendTo(element.parent().parent()),
-    rules: {
-      tel: {
-        maskRu: true
+    callbackForm.validate({
+      errorElement: "",
+      errorPlacement: (error, element) =>
+        error.appendTo(element.parent().parent()),
+      rules: {
+        tel: {
+          maskRu: true
+        }
+      },
+      messages: {
+        name: "",
+        tel: ""
+      },
+      submitHandler: function (form) {
+        const formInstance = $(form)
+
+        console.log('submit')
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: formInstance.serialize()
+        }).done(function () {
+          console.log('DONE')
+          formInput.val("");
+          // formInput.siblings().removeClass('active')
+          // $('.modal-wrapper-offer .success-message').addClass('show')
+        });
+        return false;
       }
-    },
-    messages: {
-      name: "",
-      tel: ""
-    },
-    submitHandler: function (form) {
-      const formInstance = $(form)
+    });
+  }
 
-      console.log('submit')
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: formInstance.serialize()
-      }).done(function () {
-        console.log('DONE')
-        formInput.val("");
-        formInput.siblings().removeClass('active')
-        $('.modal-wrapper-offer .success-message').addClass('show')
-      });
-      return false;
-    }
-  });
+  if ('.call__form') {
+    const callForm = $('.call__form')
+    callForm.submit(function (e) {
+      e.preventDefault()
+    })
+
+    callForm.validate({
+      errorElement: "",
+      errorPlacement: (error, element) =>
+        error.appendTo(element.parent().parent()),
+      rules: {
+        tel: {
+          maskRu: true
+        }
+      },
+      messages: {
+        name: "",
+        tel: ""
+      },
+      submitHandler: function (form) {
+        const formInstance = $(form)
+
+        console.log('submit')
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: formInstance.serialize()
+        }).done(function () {
+          console.log('DONE')
+          formInput.val("");
+          // formInput.siblings().removeClass('active')
+          // $('.modal-wrapper-offer .success-message').addClass('show')
+        });
+        return false;
+      }
+    });
+  }
+
   jQuery.validator.addMethod('maskRu', function (value, element) {
     console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
     return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
   });
+
   $('[name="tel"]').mask("+7(999)999-9999", {
     autoclear: false
   });
