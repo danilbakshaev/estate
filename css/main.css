@@ -3040,41 +3040,49 @@ img {
 
 
 /* ANIMATE */
+
 .animate-1 circle {
   opacity: 0;
+  animation-play-state: paused;
 }
 
 .animate-1 .bounce-1 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-2 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.1s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-3 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-4 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-5 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-6 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -3083,231 +3091,270 @@ img {
 .animate-2 ellipse,
 .animate-2 rect {
   opacity: 0;
+  animation-play-state: paused;
 }
 
 .animate-2 .bounce-1 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-2 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.03s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-3 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.06s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-4 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.09s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-5 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.12s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-6 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.15s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-7 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.18s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-8 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.21s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-9 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.24s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-10 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.27s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-11 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-12 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.33s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-13 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.36s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-14 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.39s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-15 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.42s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-16 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.45s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-17 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.48s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-18 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.51s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-19 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.54s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-20 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.57s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-21 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-22 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.63s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-23 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.66s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-24 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.69s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-25 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.72s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-26 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.75s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-27 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.78s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-28 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.81s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-29 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.84s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-30 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.87s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-31 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.90s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-32 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.93s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-33 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.96s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-34 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 0.99s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-35 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 1.02s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-36 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 1.05s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-37 {
-  animation: bounce 0.4s;
+  animation-name: bounce;
+  animation-duration: .4s;
   animation-delay: 1.08s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .swipe-1 {
-  animation: swipe-left 0.4s;
+  animation-name: swipe-left;
+  animation-duration: .4s;
   animation-delay: 1.11s;
   animation-fill-mode: forwards;
 }
@@ -3316,23 +3363,86 @@ img {
 .animate-3 ellipse,
 .animate-3 rect {
   opacity: 0;
+  animation-play-state: paused;
 }
 
 .animate-3 .bounce-1 {
-  animation: bounce 0.7s;
+  animation-name: bounce;
+  animation-duration: 0.7s;
   animation-fill-mode: forwards;
 }
 
 .animate-3 .arrow-1 {
-  animation: arrow-top 0.4s;
+  animation-name: arrow-top;
+  animation-duration: 0.4s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .animate-3 .arrow-2 {
-  animation: arrow-bottom 0.4s;
+  animation-name: arrow-bottom;
+  animation-duration: 0.4s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
+}
+
+.ques__svg circle,
+.ques__svg ellipse,
+.ques__svg rect {
+  opacity: 0;
+  animation-play-state: paused;
+}
+
+.ques__svg circle,
+.ques__svg ellipse,
+.ques__svg rect {
+  animation-name: bounce;
+  animation-duration: .4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.object__svg .rect-1 {
+  opacity: 0;
+  animation-play-state: paused;
+  animation-name: height-size;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.object__svg .rect-2 {
+  opacity: 0;
+  animation-play-state: paused;
+  animation-name: height-size;
+  animation-duration: 0.6s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+.object__svg .rect-3 {
+  opacity: 0;
+  animation-play-state: paused;
+  animation-name: height-size;
+  animation-duration: 0.6s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.animate-start circle,
+.animate-start ellipse,
+.animate-start rect
+{
+  animation-play-state: running!important;
+}
+
+@keyframes height-size {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes arrow-top {
