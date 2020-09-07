@@ -50,9 +50,9 @@ $(function () {
           infinite: false,
           slidesToShow: 2,
           responsive: [{
-            breakpoint: 740,
+            breakpoint: 690,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 1.2,
               slidesToScroll: 1,
             }
           }, ]
