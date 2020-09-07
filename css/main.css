@@ -2451,12 +2451,17 @@ img {
 .mark-svg{
   width: 30px;
   margin-right: 11px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .marketing__item--mod{
   display: flex;
   align-items: flex-start;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #E6EDFF;
 }
 
 .marketing__wrapper-item{
@@ -2477,6 +2482,11 @@ img {
   border-left: 0.5px solid #25BD46;
   padding-left: 14px!important;
   margin-bottom: 111px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #E6EDFF;
 }
 
 .title-h2--padding0{
