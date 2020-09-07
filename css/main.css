@@ -3038,7 +3038,6 @@ img {
     width: 100%;
     margin-right: 0;
   }
-
   .control__img{
     display: none!important;
   }
@@ -3051,3 +3050,356 @@ img {
     margin-top: 102px;
   }
 }
+
+
+
+/* ANIMATE */
+.animate-1 circle {
+  opacity: 0;
+}
+.animate-1 .bounce-1 {
+  animation: bounce 0.4s;
+  animation-fill-mode: forwards;
+}
+.animate-1 .bounce-2 {
+  animation: bounce 0.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+.animate-1 .bounce-3 {
+  animation: bounce 0.4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.animate-1 .bounce-4 {
+  animation: bounce 0.4s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.animate-1 .bounce-5 {
+  animation: bounce 0.4s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+.animate-1 .bounce-6 {
+  animation: bounce 0.4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animate-2 circle,
+.animate-2 ellipse,
+.animate-2 rect {
+  opacity: 0;
+}
+.animate-2 .bounce-1 {
+  animation: bounce 0.4s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-2 {
+  animation: bounce 0.4s;
+  animation-delay: 0.03s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-3 {
+  animation: bounce 0.4s;
+  animation-delay: 0.06s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-4 {
+  animation: bounce 0.4s;
+  animation-delay: 0.09s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-5 {
+  animation: bounce 0.4s;
+  animation-delay: 0.12s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-6 {
+  animation: bounce 0.4s;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-7 {
+  animation: bounce 0.4s;
+  animation-delay: 0.18s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-8 {
+  animation: bounce 0.4s;
+  animation-delay: 0.21s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-9 {
+  animation: bounce 0.4s;
+  animation-delay: 0.24s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-10 {
+  animation: bounce 0.4s;
+  animation-delay: 0.27s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-11 {
+  animation: bounce 0.4s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-12 {
+  animation: bounce 0.4s;
+  animation-delay: 0.33s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-13 {
+  animation: bounce 0.4s;
+  animation-delay: 0.36s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-14 {
+  animation: bounce 0.4s;
+  animation-delay: 0.39s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-15 {
+  animation: bounce 0.4s;
+  animation-delay: 0.42s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-16 {
+  animation: bounce 0.4s;
+  animation-delay: 0.45s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-17 {
+  animation: bounce 0.4s;
+  animation-delay: 0.48s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-18 {
+  animation: bounce 0.4s;
+  animation-delay: 0.51s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-19 {
+  animation: bounce 0.4s;
+  animation-delay: 0.54s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-20 {
+  animation: bounce 0.4s;
+  animation-delay: 0.57s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-21 {
+  animation: bounce 0.4s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-22 {
+  animation: bounce 0.4s;
+  animation-delay: 0.63s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-23 {
+  animation: bounce 0.4s;
+  animation-delay: 0.66s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-24 {
+  animation: bounce 0.4s;
+  animation-delay: 0.69s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-25 {
+  animation: bounce 0.4s;
+  animation-delay: 0.72s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-26 {
+  animation: bounce 0.4s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-27 {
+  animation: bounce 0.4s;
+  animation-delay: 0.78s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-28 {
+  animation: bounce 0.4s;
+  animation-delay: 0.81s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-29 {
+  animation: bounce 0.4s;
+  animation-delay: 0.84s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-30 {
+  animation: bounce 0.4s;
+  animation-delay: 0.87s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-31 {
+  animation: bounce 0.4s;
+  animation-delay: 0.90s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-32 {
+  animation: bounce 0.4s;
+  animation-delay: 0.93s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-33 {
+  animation: bounce 0.4s;
+  animation-delay: 0.96s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-34 {
+  animation: bounce 0.4s;
+  animation-delay: 0.99s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-35 {
+  animation: bounce 0.4s;
+  animation-delay: 1.02s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-36 {
+  animation: bounce 0.4s;
+  animation-delay: 1.05s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .bounce-37 {
+  animation: bounce 0.4s;
+  animation-delay: 1.08s;
+  animation-fill-mode: forwards;
+}
+.animate-2 .swipe-1 {
+  animation: swipe-left 0.4s;
+  animation-delay: 1.11s;
+  animation-fill-mode: forwards;
+}
+
+.animate-3 circle,
+.animate-3 ellipse,
+.animate-3 rect {
+  opacity: 0;
+}
+.animate-3 .bounce-1 {
+  animation: bounce 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.animate-3 .arrow-1 {
+  animation: arrow-top 0.4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.animate-3 .arrow-2 {
+  animation: arrow-bottom 0.4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow-top {
+  0% {
+    r: 1;
+    rx: 1;
+    ry: 1;
+    transform: translate(50%, 50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+    r: 11;
+    rx: 11;
+    ry: 11;
+  }
+  75% {
+    opacity: 1;
+    r: 9;
+    rx: 9;
+    ry: 9;
+  }
+  100% {
+    opacity: 1;
+    r: 10;
+    rx: 10;
+    ry: 10;
+  }
+}
+
+@keyframes arrow-bottom {
+  0% {
+    r: 1;
+    rx: 1;
+    ry: 1;
+    transform: translate(50%, 50%);
+  }
+  50% {
+    opacity: 0.3;
+    r: 11;
+    rx: 11;
+    ry: 11;
+  }
+  75% {
+    opacity: 1;
+    r: 9;
+    rx: 9;
+    ry: 9;
+  }
+  100% {
+    opacity: 1;
+    r: 10;
+    rx: 10;
+    ry: 10;
+  }
+}
+
+@keyframes swipe-left {
+  0% {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    r: 1;
+    rx: 1;
+    ry: 1;
+  }
+  50% {
+    r: 11;
+    rx: 11;
+    ry: 11;
+  }
+  75% {
+    opacity: 1;
+    r: 9;
+    rx: 9;
+    ry: 9;
+  }
+  100% {
+    opacity: 1;
+    r: 10;
+    rx: 10;
+    ry: 10;
+  }
+}
+
+
+  
+
