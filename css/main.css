@@ -743,12 +743,21 @@ img {
 
 .managment__item {
   display: flex;
+  align-items: center;
   margin-top: 85px;
+}
+
+.managment__item--second {
+  margin-top: 60px;
 }
 
 .managment__item-texts {
   display: flex;
   margin-left: 100px;
+}
+
+.managment__item-texts--second {
+  margin-left: 0;
 }
 
 .managment-text {
@@ -757,6 +766,10 @@ img {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+}
+
+.managment-text--mwidth {
+  max-width: 213px;
 }
 
 .managment-text--green {
@@ -822,6 +835,14 @@ img {
   color: #656C7F;
 }
 
+.error {
+  border: 1px solid red;
+}
+
+.valid {
+  border: 1px solid #22C144;
+}
+
 .btn--form {
   margin-bottom: 34px;
   width: 100%;
@@ -847,6 +868,7 @@ img {
   .managment__item {
     margin-top: 40px;
     flex-direction: column;
+    align-items: unset;
   }
 
   .managment-text {
@@ -868,7 +890,7 @@ img {
   }
 
   .managment-text--green {
-    padding-top: 45px;
+    /* padding-top: 45px; */
     margin-left: 0;
   }
 
@@ -921,27 +943,36 @@ img {
 
 .save__item {
   display: flex !important;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 0.5px solid #25BD46;
   background: inherit;
-  padding-bottom: 67px;
+  padding: 70px 0;
+}
+
+.save__item:first-child {
+  padding-top: 0;
+}
+
+.save__item:last-child {
+  padding-bottom: 0;
 }
 
 .save__left {
   width: 40%;
+  margin-right: 70px;
 }
 
 .save__right {
-  width: 40%;
+  width: 50%;
 }
 
 .save__text-left {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 30px;
   line-height: 150%;
   color: #FFFFFF;
+  margin: 0;
 }
 
 .save__text-right {
@@ -950,6 +981,7 @@ img {
   font-size: 18px;
   line-height: 160%;
   color: #DDE2F0;
+  margin: 0;
 }
 
 .slick-dots {
@@ -981,12 +1013,12 @@ img {
     margin-right: 50px;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .save__text-left {
     border-bottom: 0.5px solid #25BD46;
-    padding-bottom: 28px;
+    /* padding-bottom: 28px; */
     min-height: 100px;
     font-size: 20px;
   }
@@ -997,6 +1029,7 @@ img {
 
   .save__left {
     width: 100%;
+    margin-right: 0;
   }
 
   .save__right {
@@ -1005,6 +1038,10 @@ img {
 
   .save {
     margin-top: 42px !important;
+  }
+
+  .slick-dots button {
+    width: 83px;
   }
 }
 
@@ -1020,6 +1057,10 @@ img {
   flex-direction: column;
   width: 70%;
   margin-bottom: 66px;
+}
+
+.ques__item:last-child {
+  margin-bottom: 0;
 }
 
 .ques__text {
@@ -1039,12 +1080,25 @@ img {
   line-height: 150%;
   color: #E6EDFF;
   margin-left: 100px;
+  max-width: 713px;
 }
 
 .ques__item-top {
   display: flex;
   align-items: flex-end;
-  border-bottom: 0.5px solid #25BD46;
+  position: relative;
+}
+
+.ques__item-top::after {
+  content: '';
+  position: absolute;
+  width: 93%;
+  height: 1px;
+  background: #22C144;
+}
+
+.ques__item-top--legal.ques__item-top::after {
+  content: none;
 }
 
 .ques__svg {
@@ -1056,7 +1110,17 @@ img {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 1260px) {
+  .ques__item-top::after {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1080px) {
+  .ques {
+    margin-top: 110px;
+  }
+
   .ques__svg {
     display: none;
   }
@@ -1064,6 +1128,21 @@ img {
   .ques__subtext {
     margin-left: 0px;
     font-size: 16px;
+  }
+
+  .ques__item-top::after {
+    width: 107%;
+    left: -50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ques__item {
+    width: 100%;
+  }
+
+  .ques__item-top::after {
+    left: -70px;
   }
 }
 
@@ -1089,7 +1168,7 @@ img {
 }
 
 .coop__item {
-  width: calc(100% - 77px);
+  width: calc(33.33333% - 77px);
   margin-right: 77px;
 }
 
@@ -1132,10 +1211,17 @@ img {
     margin-top: 40px;
     margin-right: 0;
     padding-left: 0;
+    width: 100%;
   }
 
   .coop__item::before {
     content: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn--coop {
+    width: 100%;
   }
 }
 
@@ -1146,7 +1232,7 @@ img {
 }
 
 .title-h2--prop {
-  margin-bottom: 34px;
+  margin-bottom: 25px;
 }
 
 .title-h2--green {
@@ -1156,10 +1242,7 @@ img {
 
 .prop__inner {
   margin-top: 90px;
-  background: url(/img/bg/bg-prop.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
+  position: relative;
 }
 
 .prop-text {
@@ -1179,6 +1262,11 @@ img {
   margin-top: 75px;
   width: 326px;
   height: 39px;
+}
+
+.animation-svg--prop {
+  top: 32px;
+  bottom: unset;
 }
 
 @media screen and (max-width: 1080px) {
@@ -1208,8 +1296,17 @@ img {
   .btn--prop {
     margin-top: 40px;
   }
+
+  .animation-svg--prop {
+    display: none;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  .btn--prop {
+    width: 100%;
+  }
+}
 
 /* object */
 
@@ -1235,6 +1332,31 @@ img {
   align-items: flex-end;
 }
 
+.object__item-top__text {
+  font-family: "GothamPro", sans-serif;
+  font-size: 36px;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #D7DDEE,
+    0 -1px 0 #D7DDEE,
+    -0 1px 0 #D7DDEE,
+    0 1px 0 #D7DDEE,
+    -1px -0 0 #D7DDEE,
+    1px -0 0 #D7DDEE,
+    -1px 0 0 #D7DDEE,
+    1px 0 0 #D7DDEE,
+    -1px -1px 0 #D7DDEE,
+    1px -1px 0 #D7DDEE,
+    -1px 1px 0 #D7DDEE,
+    1px 1px 0 #D7DDEE,
+    -1px -1px 0 #D7DDEE,
+    1px -1px 0 #D7DDEE,
+    -1px 1px 0 #D7DDEE,
+    1px 1px 0 #D7DDEE;
+  font-weight: 900;
+  margin: 0;
+}
+
 .object__svg {
   margin-right: 20px;
 }
@@ -1254,6 +1376,10 @@ img {
 }
 
 @media screen and (max-width: 1080px) {
+  .object {
+    margin-top: 110px;
+  }
+
   .object__items {
     flex-direction: column;
     margin-top: 0;
@@ -1261,6 +1387,11 @@ img {
 
   .object__item {
     width: inherit;
+    margin-top: 66px;
+  }
+
+  .object__item-top {
+    min-height: auto;
   }
 
   .object__text {
@@ -1330,6 +1461,15 @@ img {
   margin-left: 4px;
 }
 
+.btn--mod {
+  width: 289px;
+  height: 39px;
+}
+
+.call__svg {
+  min-width: 22px;
+}
+
 /* 
 .left-svg{
   display: flex;
@@ -1367,7 +1507,17 @@ img {
 
 @media screen and (max-width: 860px) {
   .btn--mod {
-    width: 438px !important;
+    width: 438px;
+  }
+}
+
+@media screen and (max-width: 483px) {
+  .callback-input--mod {
+    width: calc(100% - 50px);
+  }
+
+  .btn--mod {
+    width: 100% !important;
   }
 }
 
@@ -1394,6 +1544,32 @@ img {
 .tasks__item {
   margin-right: 75px;
   width: calc(100% - 75px);
+}
+
+.tasks__item-top__text {
+  font-family: "GothamPro", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #22C144,
+    0 -1px 0 #22C144,
+    -0 1px 0 #22C144,
+    0 1px 0 #22C144,
+    -1px -0 0 #22C144,
+    1px -0 0 #22C144,
+    -1px 0 0 #22C144,
+    1px 0 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144;
+  margin: 0;
 }
 
 .tasks__text {
@@ -1425,7 +1601,11 @@ img {
   }
 
   .tasks__text {
-    margin-top: 8px;
+    margin-top: 18px;
+  }
+
+  .tasks__item-top__text {
+    font-size: 36px;
   }
 }
 
@@ -1435,15 +1615,12 @@ img {
   margin-top: 180px;
 }
 
-.move .container {
-  background: url(/img/bg/bg-move.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-}
-
 .move__inner {
   max-width: 800px;
+}
+
+.move__inner--second {
+  max-width: 980px;
 }
 
 .move__subtitle {
@@ -1463,6 +1640,11 @@ img {
   margin: 0;
 }
 
+@media screen and (max-width: 1260px) {
+  .animation-svg--move {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 1080px) {
   .move {
@@ -1475,6 +1657,10 @@ img {
 
   .move__subtitle {
     margin-bottom: 0;
+  }
+
+  .move__subtitle--second {
+    line-height: 35px;
   }
 
   .move__subtitle--green {
@@ -1569,6 +1755,7 @@ img {
 
 .control-left {
   margin-right: 140px;
+  max-width: 435px;
 }
 
 .control-left__title {
@@ -1585,7 +1772,7 @@ img {
 }
 
 .btn--control {
-  margin: 50px 0;
+  margin: 50px 0 0;
   width: 286px;
   height: 39px;
 }
@@ -1594,11 +1781,10 @@ img {
   font-weight: 700;
 }
 
-.control-right {}
-
 .control__inner {
   margin-top: 80px;
   display: flex;
+  justify-content: space-between;
   margin-right: -65px;
 }
 
@@ -1607,8 +1793,16 @@ img {
   margin-right: 65px;
 }
 
+.control__item--width33 {
+  width: calc(33.33333% - 65px);
+}
+
 .control__wrap {
   margin-bottom: 330px;
+}
+
+.control-left__wrap {
+  margin: 50px 0 45px;
 }
 
 .control__wrap:last-child {
@@ -1645,10 +1839,12 @@ img {
   }
 
   .btn--control {
-    margin: 50px 0 45px;
+    margin: 30px 0 0;
   }
 
-  .control-left__text--bold {}
+  .control-left__wrap {
+    margin: 45px 0 20px;
+  }
 
   .control-right {
     order: 1;
@@ -1667,6 +1863,12 @@ img {
 
   .control__wrap {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn--control {
+    width: 100%;
   }
 }
 
@@ -1748,13 +1950,26 @@ img {
   .footer__text {
     margin-top: 35px;
   }
+
+  .footer__text--kdm {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__text--kdm svg {
+    margin-right: 25px;
+  }
+
+  .logo--footer {
+    max-width: 209px;
+  }
 }
 
 @media screen and (max-width: 780px) {
   .footer__inner::after {
     width: 120%;
     left: auto;
-    right: 0;
+    right: 15px;
   }
 }
 
@@ -1764,15 +1979,14 @@ img {
   margin-top: 145px;
 }
 
-.rent .container {
-  background: url(/img/bg/bg-rent.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: top right;
+.animation-svg--rent {
+  bottom: unset;
+  top: 0;
 }
 
 .rent__item {
   margin-top: 115px;
+  position: relative;
 }
 
 .rent__item:first-child {
@@ -1780,11 +1994,11 @@ img {
 }
 
 .rent__item--width {
-  max-width: 600px;
+  max-width: 796px;
 }
 
 .title-h3 {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 36px;
   line-height: 130%;
   letter-spacing: 0.03em;
@@ -1801,19 +2015,33 @@ img {
   margin: 20px 0 0;
   padding-bottom: 25px;
   border-bottom: 1px solid #25BD46;
-  position: relative;
 }
 
-.rent__text--elem::after {
-  content: '';
-  position: absolute;
-  bottom: 7px;
+.rent__text--green {
+  top: 20px;
   right: 0;
-  width: 228px;
-  height: 38px;
-  background-image: url("data:image/svg+xml,%3Csvg width='288' height='38' viewBox='0 0 288 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.74096 12.5025L3.7392 12.5042C1.62754 14.6159 0.575345 17.1677 0.575345 20.1839C0.575345 23.2291 1.61594 25.8085 3.70177 27.9463C5.783 30.0528 8.37226 31.1075 11.499 31.1075C15.4207 31.1075 18.4322 29.6228 20.5812 26.6503L16.0471 23.3816C15.4499 24.0369 14.8617 24.5473 14.2811 24.9013C13.6143 25.3245 12.8132 25.5245 11.8996 25.5245C10.5027 25.5245 9.3445 25.0086 8.46116 23.9781C7.58627 22.9574 7.15989 21.6823 7.15989 20.1839C7.15989 18.71 7.58753 17.449 8.46116 16.4298C9.34979 15.393 10.5515 14.8834 12.0197 14.8834C13.6362 14.8834 14.9791 15.5524 16.0297 16.8486L20.4724 13.6303C18.5263 10.7465 15.6489 9.30033 11.7794 9.30033C8.51508 9.30033 5.84664 10.3711 3.74096 12.5025ZM21.0331 13.7343C19.0035 10.5028 15.9189 8.8871 11.7794 8.8871C8.41438 8.8871 5.63692 9.99541 3.44699 12.212C1.25707 14.402 0.162109 17.0592 0.162109 20.1839C0.162109 23.3352 1.24372 26.0192 3.40693 28.2359C5.57015 30.4258 8.2675 31.5208 11.499 31.5208C15.6919 31.5208 18.91 29.865 21.1533 26.5534L15.9856 22.8278C15.318 23.6023 14.677 24.1765 14.0628 24.5504C13.4752 24.9243 12.7542 25.1112 11.8996 25.1112C10.6177 25.1112 9.57611 24.6439 8.77492 23.7091C7.97373 22.7744 7.57313 21.5993 7.57313 20.1839C7.57313 18.7952 7.97373 17.6334 8.77492 16.6987C9.57611 15.764 10.6577 15.2966 12.0197 15.2966C13.6012 15.2966 14.8965 15.986 15.9056 17.3647C15.919 17.3829 15.9323 17.4013 15.9456 17.4198L21.0331 13.7343ZM31.4621 9.32775H23.8508V37.4095H31.4621V28.356C31.5975 28.5136 31.7352 28.6653 31.8753 28.811C33.5872 30.5908 35.6527 31.4807 38.0719 31.4807C40.7425 31.4807 42.9992 30.4525 44.842 28.3961C46.7114 26.313 47.6461 23.5623 47.6461 20.1438C47.6461 16.7521 46.7114 14.0281 44.842 11.9717C42.9725 9.88858 40.7025 8.84704 38.0319 8.84704C35.6818 8.84704 33.6296 9.80941 31.8753 11.7342C31.7357 11.8874 31.5979 12.0466 31.4621 12.212V9.32775ZM31.0488 36.9963V27.2408L31.7756 28.0868C33.4908 30.0836 35.5818 31.0675 38.0719 31.0675C40.6206 31.0675 42.7668 30.0926 44.5342 28.1203C46.3214 26.129 47.2329 23.484 47.2329 20.1438C47.2329 16.8311 46.322 14.214 44.5362 12.2497L44.5344 12.2477C42.7391 10.2472 40.5789 9.26027 38.0319 9.26027C35.6371 9.26027 33.5584 10.3111 31.7814 12.4743L31.0488 13.3661V9.74099H24.264V36.9963H31.0488ZM39.1781 23.988C38.246 25.0074 37.0808 25.5245 35.7084 25.5245C34.3599 25.5245 33.2089 25.0053 32.2788 23.988C31.3462 22.9679 30.8886 21.6894 30.8886 20.1839C30.8886 18.6539 31.3448 17.3613 32.2788 16.3398C33.2089 15.3224 34.3599 14.8033 35.7084 14.8033C37.0798 14.8033 38.2444 15.3196 39.1761 16.3376C40.1113 17.3324 40.5682 18.5995 40.5682 20.1038C40.5682 21.6582 40.1134 22.965 39.1781 23.988ZM38.8731 16.6186C39.7277 17.5266 40.155 18.6883 40.155 20.1038C40.155 21.5726 39.7277 22.7744 38.8731 23.7091C38.0185 24.6439 36.9636 25.1112 35.7084 25.1112C34.4799 25.1112 33.4384 24.6439 32.5838 23.7091C31.7291 22.7744 31.3018 21.5993 31.3018 20.1839C31.3018 18.7417 31.7291 17.5533 32.5838 16.6186C33.4384 15.6839 34.4799 15.2165 35.7084 15.2165C36.9636 15.2165 38.0185 15.6839 38.8731 16.6186ZM53.4268 12.4148L53.4251 12.4166C51.4474 14.497 50.4542 17.0765 50.4542 20.1839C50.4542 23.4792 51.5009 26.1036 53.5724 28.0984C55.6478 30.097 58.3307 31.1075 61.6582 31.1075C65.3487 31.1075 68.2805 29.7946 70.4927 27.1707L66.8846 24.1811C65.4042 25.5396 63.7934 26.2455 62.0588 26.2455C60.7387 26.2455 59.6251 25.9324 58.7541 25.2699C57.8821 24.6066 57.2962 23.6257 56.9718 22.3704L56.8383 21.8538H71.4825C71.4942 21.5527 71.5002 21.1704 71.5002 20.7047C71.5002 17.3656 70.5892 14.6334 68.7919 12.4766C67.0178 10.3478 64.4357 9.26027 60.9772 9.26027C57.9059 9.26027 55.4001 10.3133 53.4268 12.4148ZM71.8734 22.267C71.9001 21.9198 71.9135 21.399 71.9135 20.7047C71.9135 17.2863 70.9788 14.4554 69.1093 12.212C67.2399 9.9687 64.5292 8.84704 60.9772 8.84704C57.7992 8.84704 55.1819 9.942 53.1255 12.1319C51.0692 14.2951 50.041 16.9791 50.041 20.1839C50.041 23.5756 51.1226 26.313 53.2858 28.3961C55.449 30.4792 58.2398 31.5208 61.6582 31.5208C65.6107 31.5208 68.7487 30.0519 71.0721 27.1143C71.0722 27.1143 71.0721 27.1144 71.0721 27.1143L66.866 23.629C65.3704 25.0979 63.768 25.8323 62.0588 25.8323C59.6984 25.8323 58.1761 24.7816 57.4921 22.6802C57.4486 22.5467 57.4086 22.409 57.3719 22.267H71.8734ZM56.7585 18.7944L56.8448 18.3089C57.0683 17.0517 57.5218 16.0238 58.2299 15.2567C58.9763 14.4506 59.9148 14.0421 61.0173 14.0421C62.1648 14.0421 63.131 14.4442 63.8816 15.2533C64.6254 16.0282 65.0528 17.0683 65.1936 18.3356L65.2446 18.7944H56.7585ZM63.5811 15.537C62.9134 14.8159 62.0588 14.4554 61.0173 14.4554C60.0291 14.4554 59.2012 14.8159 58.5336 15.537C57.968 16.1497 57.5687 16.9601 57.3359 17.968C57.3049 18.1022 57.2768 18.24 57.2517 18.3812H64.7829C64.7672 18.24 64.7478 18.1022 64.7247 17.968C64.5515 16.9601 64.1703 16.1497 63.5811 15.537ZM80.7454 31H92.0822V35.4065H98.5719L99.2929 24.8709H96.7692V9.32775H77.4605V10.3693C77.4605 13.8945 77.3002 16.7121 76.9798 18.8219C76.686 20.9317 76.2053 22.948 75.5376 24.8709H73.5346V35.4065H80.3448L80.7454 31ZM79.9674 34.9933L80.368 30.5867H92.4955V34.9933H98.186L98.8505 25.2841H96.356V9.74099H77.8737V10.3693C77.8737 13.9023 77.7134 16.7423 77.3887 18.8812C77.0914 21.0157 76.6047 23.0576 75.928 25.0064L75.8316 25.2841H73.9479V34.9933H79.9674ZM82.7557 25.2841L82.913 24.7535C83.7561 21.9077 84.2184 18.9011 84.298 15.7321V14.9635H89.5311V25.2841H82.7557ZM84.7113 15.7373C84.635 18.7894 84.2074 21.6962 83.4287 24.4576C83.3897 24.5957 83.3499 24.7335 83.3092 24.8709H89.1178V15.3767H84.7113V15.7373ZM108.96 31H101.349V9.32775H108.96V17.0192H115.209V9.32775H122.821V31H115.209V23.1483H108.96V31ZM115.623 30.5867V22.7351H108.547V30.5867H101.762V9.74099H108.547V17.4324H115.623V9.74099H122.408V30.5867H115.623ZM141.116 31H148.487V9.32775H141.476L134.266 20.1839V9.32775H126.895V31H133.905L141.116 20.1438V31ZM133.683 30.5867L141.529 18.7748V30.5867H148.073V9.74099H141.698L133.852 21.5529V9.74099H127.308V30.5867H133.683ZM166.779 31H174.15V9.32775H167.139L159.929 20.1839V9.32775H152.558V31H159.568L166.779 20.1438V31ZM159.347 30.5867L167.192 18.7748V30.5867H173.737V9.74099H167.361L159.515 21.5529V9.74099H152.971V30.5867H159.347ZM167.703 5.69672L167.707 5.69354C168.714 4.80095 169.376 3.55777 169.672 1.9304L166.444 1.34356C166.176 2.00543 165.829 2.54153 165.389 2.92818C164.869 3.38503 164.244 3.61187 163.534 3.61187C162.825 3.61187 162.199 3.38503 161.679 2.92818C161.239 2.54153 160.892 2.00543 160.624 1.34356L157.396 1.93044C157.69 3.55917 158.34 4.80276 159.323 5.69491C160.411 6.6582 161.803 7.15189 163.534 7.15189C165.266 7.15189 166.644 6.65771 167.703 5.69672ZM156.924 1.59626L160.89 0.875183C161.424 2.42415 162.306 3.19864 163.534 3.19864C164.763 3.19864 165.644 2.42415 166.178 0.875183L170.144 1.59626C170.144 1.59619 170.144 1.59632 170.144 1.59626C169.877 3.49232 169.156 4.96129 167.981 6.00281C166.832 7.04436 165.35 7.56513 163.534 7.56513C161.718 7.56513 160.222 7.04436 159.047 6.00281C157.899 4.96126 157.191 3.49241 156.924 1.59626ZM192.029 12.5025L192.027 12.5042C189.915 14.6159 188.863 17.1677 188.863 20.1839C188.863 23.2291 189.904 25.8086 191.99 27.9464C194.071 30.0528 196.66 31.1075 199.787 31.1075C203.708 31.1075 206.72 29.6228 208.869 26.6503L204.335 23.3816C203.738 24.0368 203.15 24.5471 202.569 24.9011C201.902 25.3244 201.101 25.5245 200.187 25.5245C198.79 25.5245 197.632 25.0086 196.749 23.9781C195.874 22.9574 195.448 21.6823 195.448 20.1839C195.448 18.71 195.875 17.449 196.749 16.4298C197.638 15.393 198.839 14.8834 200.308 14.8834C201.924 14.8834 203.267 15.5524 204.317 16.8486L208.76 13.6303C206.814 10.7465 203.937 9.30033 200.067 9.30033C196.803 9.30033 194.134 10.3711 192.029 12.5025ZM209.321 13.7343C207.291 10.5028 204.207 8.8871 200.067 8.8871C196.702 8.8871 193.925 9.99541 191.735 12.212C189.545 14.402 188.45 17.0592 188.45 20.1839C188.45 23.3352 189.531 26.0192 191.695 28.2359C193.858 30.4258 196.555 31.5208 199.787 31.5208C203.98 31.5208 207.198 29.865 209.441 26.5535C209.441 26.5535 209.441 26.5536 209.441 26.5535L204.273 22.8278C203.606 23.6023 202.965 24.1765 202.351 24.5504C201.763 24.9243 201.042 25.1112 200.187 25.1112C198.905 25.1112 197.864 24.6439 197.063 23.7091C196.261 22.7744 195.861 21.5993 195.861 20.1839C195.861 18.7952 196.261 17.6334 197.063 16.6987C197.864 15.764 198.945 15.2966 200.308 15.2966C201.889 15.2966 203.185 15.9864 204.194 17.3658C204.207 17.3837 204.22 17.4017 204.233 17.4198L209.321 13.7343ZM219.75 12.212C219.886 12.0466 220.023 11.8873 220.163 11.7341C221.917 9.80941 223.97 8.84704 226.32 8.84704C228.99 8.84704 231.26 9.88858 233.13 11.9717C234.999 14.0281 235.934 16.7521 235.934 20.1438C235.934 23.5623 234.999 26.313 233.13 28.3961C231.287 30.4525 229.03 31.4807 226.36 31.4807C223.94 31.4807 221.875 30.5908 220.163 28.811C220.023 28.6653 219.885 28.5136 219.75 28.356V37.4095H212.139V9.32775H219.75V12.212ZM219.337 9.74099V13.3661L220.069 12.4743C221.846 10.3111 223.925 9.26027 226.32 9.26027C228.867 9.26027 231.027 10.2472 232.822 12.2477L232.824 12.2497C234.61 14.214 235.521 16.8311 235.521 20.1438C235.521 23.484 234.609 26.1287 232.822 28.1201C231.055 30.0924 228.908 31.0675 226.36 31.0675C223.87 31.0675 221.779 30.0836 220.063 28.0868L219.337 27.2408V36.9963H212.552V9.74099H219.337ZM227.466 23.988C226.534 25.0074 225.369 25.5245 223.996 25.5245C222.648 25.5245 221.497 25.0053 220.567 23.988C219.634 22.9679 219.176 21.6894 219.176 20.1839C219.176 18.6539 219.633 17.3613 220.567 16.3398C221.497 15.3224 222.648 14.8033 223.996 14.8033C225.368 14.8033 226.532 15.3197 227.464 16.3381C228.399 17.3328 228.856 18.5998 228.856 20.1038C228.856 21.6582 228.401 22.965 227.466 23.988ZM227.161 16.6186C228.015 17.5266 228.443 18.6883 228.443 20.1038C228.443 21.5726 228.015 22.7744 227.161 23.7091C226.306 24.6439 225.251 25.1112 223.996 25.1112C222.768 25.1112 221.726 24.6439 220.872 23.7091C220.017 22.7744 219.59 21.5993 219.59 20.1839C219.59 18.7417 220.017 17.5533 220.872 16.6186C221.726 15.6839 222.768 15.2165 223.996 15.2165C225.251 15.2165 226.306 15.6839 227.161 16.6186ZM258.879 12.172C256.609 9.95535 253.765 8.84704 250.347 8.84704C246.901 8.84704 244.031 9.95535 241.734 12.172C239.464 14.3886 238.329 17.0592 238.329 20.1839C238.329 23.3352 239.464 26.0192 241.734 28.2359C244.004 30.4258 246.848 31.5208 250.266 31.5208C253.712 31.5208 256.569 30.4124 258.839 28.1958C261.136 25.9792 262.284 23.3085 262.284 20.1839C262.284 17.0325 261.149 14.3619 258.879 12.172ZM242.022 27.9395C244.208 30.0479 246.946 31.1075 250.266 31.1075C253.614 31.1075 256.365 30.0346 258.551 27.9001L258.552 27.8985C260.77 25.7578 261.871 23.1937 261.871 20.1839C261.871 17.1448 260.782 14.5815 258.592 12.4694L258.591 12.4676C256.404 10.3326 253.666 9.26027 250.347 9.26027C247 9.26027 244.235 10.3328 242.022 12.468C239.831 14.6081 238.742 17.1726 238.742 20.1839C238.742 23.2228 239.831 25.8002 242.022 27.9395ZM253.941 23.9431C253.027 24.975 251.815 25.4844 250.347 25.4844C248.923 25.4844 247.717 24.9554 246.757 23.9082C245.804 22.8686 245.327 21.6199 245.327 20.1839C245.327 18.7064 245.77 17.4437 246.672 16.4247C247.586 15.3928 248.798 14.8834 250.266 14.8834C251.69 14.8834 252.896 15.4124 253.856 16.4595C254.809 17.4992 255.287 18.7479 255.287 20.1839C255.287 21.6614 254.843 22.9241 253.941 23.9431ZM279.44 31H287.812L280.201 18.221L287.612 9.32775H278.999L273.11 17.3797V9.32775H265.499V31H273.11V26.7136L275.314 24.0697L279.44 31ZM272.697 30.5867V26.564L275.37 23.3565L279.675 30.5867H287.085L279.696 18.1811L286.73 9.74099H279.209L272.697 18.6448V9.74099H265.912V30.5867H272.697ZM253.631 23.6691C252.804 24.6038 251.709 25.0712 250.347 25.0712C249.038 25.0712 247.943 24.5904 247.062 23.629C246.18 22.6676 245.74 21.5192 245.74 20.1839C245.74 18.7952 246.154 17.6334 246.982 16.6987C247.809 15.764 248.904 15.2966 250.266 15.2966C251.575 15.2966 252.67 15.7773 253.551 16.7388C254.433 17.7002 254.873 18.8486 254.873 20.1839C254.873 21.5726 254.459 22.7344 253.631 23.6691Z' fill='%2322C144'/%3E%3C/svg%3E%0A");
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: absolute;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #22C144,
+    0 -1px 0 #22C144,
+    -0 1px 0 #22C144,
+    0 1px 0 #22C144,
+    -1px -0 0 #22C144,
+    1px -0 0 #22C144,
+    -1px 0 0 #22C144,
+    1px 0 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144;
 }
 
 .btn--rent {
@@ -1856,12 +2084,37 @@ img {
   left: 0;
 }
 
+.rent-list__num {
+  font-family: "GothamPro", sans-serif;
+  font-size: 71px;
+  font-weight: 900;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #22C144,
+    0 -1px 0 #22C144,
+    -0 1px 0 #22C144,
+    0 1px 0 #22C144,
+    -1px -0 0 #22C144,
+    1px -0 0 #22C144,
+    -1px 0 0 #22C144,
+    1px 0 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144;
+  margin: 0;
+}
+
 .rent-list__text {
   font-size: 18px;
   line-height: 150%;
   color: #E6EDFF;
   margin: 0;
-  padding-top: 33px;
+  padding-top: 57px;
 }
 
 .title-h2--rent {
@@ -1887,8 +2140,8 @@ img {
     margin-top: 50px;
   }
 
-  .rent .container {
-    background: none;
+  .animation-svg--rent {
+    display: none;
   }
 
   .title-h2--rent {
@@ -1920,8 +2173,7 @@ img {
   }
 
   .btn--rent {
-    margin-top: 67px;
-    width: 100%;
+    margin-top: 55px;
   }
 
   .rent-list {
@@ -1958,15 +2210,28 @@ img {
     margin-bottom: 0;
   }
 
-  .rent-list__item--second svg {
-    padding-bottom: 0;
-    width: 20%;
+  .rent-list__num {
+    font-size: 38px;
     margin-right: 17px;
+    padding-bottom: 0;
+    min-width: 94px;
   }
 
-  .rent-list__item--second p {
+  .rent-list__text {
     padding-top: 0;
-    width: 80%;
+  }
+
+  .rent__text--green {
+    font-size: 24px;
+    position: relative;
+    margin: 25px 0 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn--rent {
+    width: 100%;
   }
 }
 
@@ -1974,14 +2239,7 @@ img {
 
 .ques__items--legal {
   margin-top: 76px;
-}
-
-.ques__items--legal {
-  margin-top: 90px;
-  background: url(/img/bg/bg-prop.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: right;
+  position: relative;
 }
 
 .ques__item-top--legal {
@@ -1996,15 +2254,21 @@ img {
   content: '';
   position: absolute;
   border: 0.5px solid #25BD46;
-  width: 109%;
+  width: 200%;
+  left: auto;
+  right: 0;
   bottom: 0;
-  left: -45px;
 }
 
 .ques__subtext--legal {
   margin-left: 0;
 }
 
+.animation-svg--ques {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 @media screen and (max-width: 1080px) {
   .ques--legal {
@@ -2029,20 +2293,26 @@ img {
     margin-bottom: 0;
   }
 
-  .ques__item-top--legal {}
 
   .ques__text--legal {
     font-size: 20px;
   }
 
-  .ques__text--legal::after {}
 
   .ques__subtext--legal {
     font-size: 16px;
   }
+
+  .animation-svg--ques {
+    display: none;
+  }
 }
 
-
+@media screen and (max-width: 476px) {
+  .ques__text--legal::after {
+    right: 60px;
+  }
+}
 
 /* page-3 */
 
@@ -2110,6 +2380,28 @@ img {
   margin-left: 42px;
 }
 
+.managment__item-texts--margin0{
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.deal__subtext--text-item{
+  max-width: 278px;
+}
+
+.deal__subtext--text-item-one{
+  max-width: 214px;
+}
+
+
+
+
+@media screen and (max-width: 1080px) {
+  .save__text-right--margin0 {
+    margin-top: 36px;
+  }
+  
+}
 
 @media screen and (max-width: 992px) {
   .animation-svg {
@@ -2117,7 +2409,18 @@ img {
   }
 }
 
+@media screen and (max-width: 755px) {
+  .deal__subtext--max756{
+    margin: 0;
+    /* margin-top: 33px; */
+  }
+}
+
 /* work */
+
+.work{
+  margin-top: 110px;
+}
 
 .work__text {
   font-style: normal;
@@ -2299,22 +2602,62 @@ img {
   margin-right: 50px;
 }
 
+.prep__item:last-child {
+  margin-left: 50px;
+}
+
 .prep__item-svg {
   display: flex;
   align-items: center;
   height: 44px;
 }
 
-.prep__item-svg svg {
-  margin-right: 35px;
+.prep__item-svg__text {
+  margin: 0 35px 0 0;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #22C144,
+    0 -1px 0 #22C144,
+    -0 1px 0 #22C144,
+    0 1px 0 #22C144,
+    -1px -0 0 #22C144,
+    1px -0 0 #22C144,
+    -1px 0 0 #22C144,
+    1px 0 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144;
 }
 
-.prep__item-svg svg:last-child {
-  margin-right: 0;
+.prep__item-svg svg {
+  min-width: 70px;
 }
 
 .prep__text {
   margin: 30px 0 0;
+}
+
+@media screen and (max-width: 1260px) {
+  .prep__inner {
+    flex-wrap: wrap;
+  }
+
+  .prep__item {
+    width: calc(50% - 50px);
+    margin-bottom: 25px;
+  }
+
+  .prep__item:last-child {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -2339,6 +2682,7 @@ img {
     margin-right: 0;
     margin-top: 50px;
     padding-bottom: 20px;
+    flex-wrap: unset;
   }
 
   .prep__item {
@@ -2349,13 +2693,16 @@ img {
     margin-right: 0;
   }
 
-  .prep__text {}
 }
 
 /* move */
 
 .move--second .container {
   background: none;
+}
+
+.move__inner--mod{
+  max-width: 100%;
 }
 
 /* marketing */
@@ -2377,10 +2724,7 @@ img {
 
 .marketing-list {
   margin-top: 110px;
-  background: url(/img/bg/bg-move.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
+  position: relative;
 }
 
 .marketing-list__item {
@@ -2401,6 +2745,65 @@ img {
 .marketing-list__text {
   padding-left: 24px;
   margin: 0;
+}
+
+.mark-svg{
+  width: 30px;
+  margin-right: 11px;
+  margin-top: 6px;
+}
+
+.marketing__item--mod{
+  display: flex;
+  align-items: flex-start;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #E6EDFF;
+}
+
+.marketing__wrapper-item{
+  margin-bottom: 42px;
+  position: relative;
+}
+
+.marketing__wrapper-item-inner{
+  position: relative;
+}
+
+.marketing__wrapper-item:first-child{
+  margin-top: 61px;
+}
+
+.marketing__item--marginBorder{
+  margin-top: 20px;
+  border-left: 0.5px solid #25BD46;
+  padding-left: 14px!important;
+  margin-bottom: 111px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #E6EDFF;
+}
+
+.title-h2--padding0{
+  max-width: 100%;
+}
+
+.mark-svg-right{
+  position: absolute;
+  top: 0%;
+  right: 0;
+}
+/* .marketing__wrapper-mod{
+  display: none;
+} */
+
+.animation-svg--marketing-list {
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -2427,6 +2830,32 @@ img {
   .marketing-list__item {
     max-width: 100%;
   }
+
+
+  .marketing__inner{
+    display: none;
+  }
+
+  .title-h2--padding0{
+    padding: 0;
+    border: none;
+  }
+
+  .marketing__item--marginBorder{
+    margin-bottom: 60px;
+  }
+
+  .mark-svg-right{
+    display: none;
+  }
+
+  .marketing-list__text {
+    font-size: 16px;
+  }
+
+  .animation-svg--marketing-list {
+    display: none;
+  }
 }
 
 /* stage */
@@ -2448,9 +2877,10 @@ img {
 
 .stage-item__top {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 14px;
   position: relative;
+  min-height: 62px;
 }
 
 .stage-item__top::after {
@@ -2460,6 +2890,31 @@ img {
   left: 0;
   border-bottom: 0.5px solid #25BD46;
   width: 100%;
+}
+
+.stage-item__num {
+  font-family: "GothamPro", sans-serif;
+  font-size: 65px;
+  font-weight: 900;
+  color: #000525;
+  text-shadow:
+    -0 -1px 0 #22C144,
+    0 -1px 0 #22C144,
+    -0 1px 0 #22C144,
+    0 1px 0 #22C144,
+    -1px -0 0 #22C144,
+    1px -0 0 #22C144,
+    -1px 0 0 #22C144,
+    1px 0 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144,
+    -1px -1px 0 #22C144,
+    1px -1px 0 #22C144,
+    -1px 1px 0 #22C144,
+    1px 1px 0 #22C144;
+  margin: 0;
 }
 
 .stage-item__title {
@@ -2484,6 +2939,27 @@ img {
   height: 39px;
   margin-top: 85px;
 }
+
+.managment-text--mod{
+  margin: 0;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.btn--mod{
+  width: 286px;
+}
+
+.stage-item__text--block{
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .stage__inner{
+    align-items: flex-end;
+  }
+}
+
 
 @media screen and (max-width: 1080px) {
   .stage {
@@ -2529,6 +3005,18 @@ img {
   .btn-stage {
     width: 100%;
   }
+  .stage-item__text--dispNone{
+    display: none;
+  }
+
+  .stage-item__text--block{
+    display: block;
+  }
+
+  .btn--mod{
+    margin-top: 61px;
+    width: 100%;
+  }
 }
 
 .control__inner--second {
@@ -2549,6 +3037,17 @@ img {
   .control__item--second {
     width: 100%;
     margin-right: 0;
+  }
+  .control__img{
+    display: none!important;
+  }
+
+  .control__left--dispNone{
+    display: none;
+  }
+
+  .control{
+    margin-top: 102px;
   }
 }
 
@@ -2900,3 +3399,7 @@ img {
     ry: 10;
   }
 }
+
+
+  
+
