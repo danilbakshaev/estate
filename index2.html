@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Estate - second page</title>
     <meta name="description" content="">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/esatate.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.css">
@@ -23,13 +23,13 @@
                         <img src="/img/logo.svg" alt="">
                     </a>
                     <nav class="header__menu mobile-hide">
-                        <a class="header__link" href="#">Принципы</a>
-                        <a class="header__link" href="#">Цена</a>
-                        <a class="header__link" href="#">Проекты</a>
-                        <a class="header__link" href="#">Контакты</a>
+                        <a class="header__link" href="#princip">Принципы</a>
+                        <a class="header__link" href="#price">Цена</a>
+                        <a class="header__link" href="#project">Проекты</a>
+                        <a class="header__link" href="#contact">Контакты</a>
                         <a class="header__link" href="tel:+78129495050">+7 812 949-50-50</a>
                     </nav>
-                    <button class="btn btn--header mobile-hide">Нанять нас</button>
+                    <button class="btn btn--header mobile-hide openCallback">Нанять нас</button>
                     <button class="btn btn--header__menu desktop-hide openMenu">меню</button>
                 </div>
             </div>
@@ -66,8 +66,8 @@
                         </form>
                     </div>
                 </div>
-                <svg class="animate-1 animation-svg animate" width="503" height="509" viewBox="-10 -10 523 529" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                <svg class="animate-1 animation-svg animate" width="503" height="509" viewBox="-10 -10 523 529"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle class="bounce-1" cx="10.9348" cy="497.532" r="10.9348" fill="white"></circle>
                     <circle class="bounce-3" cx="185.892" cy="497.532" r="10.9348" fill="white"></circle>
                     <circle class="bounce-3" cx="185.892" cy="320.753" r="10.9348" fill="white"></circle>
@@ -166,7 +166,7 @@
                 <div class="rent__item">
                     <h3 class="title-h3 title-h3--rent">Найдем арендатора за 2 недели</h3>
                     <p class="rent__text rent__text--elem">с момента подписания договора</p>
-                    <p class="rent__text rent__text--green">средний срок</p>
+                    <p class="rent__text rent__text--green green-text">средний срок</p>
                 </div>
                 <button class="btn btn--rent">Начать сотрудничество</button>
                 <svg class="animation-svg animation-svg--rent" width="254" height="196" viewBox="0 0 254 196"
@@ -249,7 +249,7 @@
             </div>
         </section>
 
-        <section class="rent-list rent-list--second">
+        <section class="rent-list rent-list--second" id="price">
             <div class="container">
                 <h2 class="title-h2 title-h2--rent">Подберем арендатора за 100% ежемесячной арендной ставки</h2>
                 <div class="rent-list__inner rent-list__inner--mt">
@@ -271,7 +271,7 @@
             </div>
         </section>
 
-        <section class="ques ques--legal">
+        <section class="ques ques--legal" id="princip">
             <div class="container">
                 <h2 class="title-h2 title-h2--legal">Обеспечиваем юридически грамотное сопровождение сделки аренды
                     помещения</h2>
@@ -367,7 +367,7 @@
                     <div class="prep__inner">
                         <div class="prep__item">
                             <div class="prep__item-svg">
-                                <p class="prep__item-svg__text">Составим</p>
+                                <p class="prep__item-svg__text green-text">Составим</p>
                                 <svg width="70" height="44" viewBox="0 0 70 44" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1" fill="white">
@@ -383,7 +383,7 @@
                         </div>
                         <div class="prep__item prep__item--2">
                             <div class="prep__item-svg">
-                                <p class="prep__item-svg__text">Рекомендуем </p>
+                                <p class="prep__item-svg__text green-text">Рекомендуем </p>
                                 <svg width="70" height="44" viewBox="0 0 70 44" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1" fill="white">
@@ -399,7 +399,7 @@
                         </div>
                         <div class="prep__item prep__item--3">
                             <div class="prep__item-svg">
-                                <p class="prep__item-svg__text">Проконтролируем</p>
+                                <p class="prep__item-svg__text green-text">Проконтролируем</p>
                                 <svg width="70" height="44" viewBox="0 0 70 44" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1" fill="white">
@@ -415,7 +415,7 @@
                         </div>
                         <div class="prep__item">
                             <div class="prep__item-svg">
-                                <p class="prep__item-svg__text">Проведем</p>
+                                <p class="prep__item-svg__text green-text">Проведем</p>
                                 <svg width="70" height="44" viewBox="0 0 70 44" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1" fill="white">
@@ -548,7 +548,7 @@
                         <div class="stage-item__top">
                             <p class="managment-text managment-text--green managment-text--numb managment-text--mod">2
                             </p>
-                            <p class="stage-item__title">подбор арендатора, переговоры</p>
+                            <p class="stage-item__title">подбор покупателя, переговоры</p>
                         </div>
                         <div class="stage-item__bottom">
                             <p class="stage-item__text stage-item__text--dispNone">Проводим переговоры, согласуем
@@ -570,11 +570,11 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-stage">нанять нас</button>
+                <button class="btn btn-stage openCallback">Нанять нас</button>
             </div>
         </section>
 
-        <section class="control">
+        <section class="control" id="project">
             <div class="container">
                 <h2 class="title-h2 title-h2--control">Объекты, которые зарабатывают</h2>
                 <div class="control-slider">
@@ -583,8 +583,8 @@
                             <div class="control-left">
                                 <p class="control-left__title">Офисное помещение</p>
                                 <p class="control-left__text">В управлении 1 год</p>
-                                <p class="control-left__text">ул. 6-я Советская, д. 8</p>
-                                <button class="btn btn--control">Хочу услышать отзыв</button>
+                                <p class="control-left__text">ул. проспект Просвещения, д. 87</p>
+                                <button class="btn btn--control openOpinion">Хочу услышать отзыв</button>
                                 <div class="control-left__wrap">
                                     <p class="control-left__text control-left__text--bold">Проблемы на момент передачи
                                         объекта:
@@ -595,7 +595,7 @@
                                 </div>
                             </div>
                             <div class="control-right">
-                                <img src="/img/control-sec.jpg" alt="Магазин">
+                                <img src="/img/kfc.jpeg" alt="KFC">
                             </div>
                         </div>
                         <div class="control__row">
@@ -624,8 +624,8 @@
                             <div class="control-left">
                                 <p class="control-left__title">Булочная Ф. Вольчека</p>
                                 <p class="control-left__text">В управлении 1 год</p>
-                                <p class="control-left__text">ул. 6-я Советская, д. 8</p>
-                                <button class="btn btn--control">Хочу услышать отзыв</button>
+                                <p class="control-left__text">ул. Блохина, д. 23</p>
+                                <button class="btn btn--control openOpinion">Хочу услышать отзыв</button>
                                 <div class="control-left__wrap">
                                     <p class="control-left__text control-left__text--bold">Проблемы на момент передачи
                                         объекта:
@@ -636,7 +636,7 @@
                                 </div>
                             </div>
                             <div class="control-right">
-                                <img src="/img/p2-2.png" alt="Хлеб">
+                                <img src="/img/bul.jpeg" alt="Булочная">
                             </div>
                         </div>
                         <div class="control__row">
@@ -664,7 +664,7 @@
                             <div class="control-left">
                                 <p class="control-left__title">Супермаркет «Лента»</p>
                                 <p class="control-left__text">В управлении 1 год</p>
-                                <p class="control-left__text">ул. 6-я Советская, д. 8</p>
+                                <p class="control-left__text">ул. Бестужевская, д. 10</p>
                                 <div class="control-left__wrap">
                                     <p class="control-left__text control-left__text--bold">Проблемы на момент передачи
                                         объекта:
@@ -675,7 +675,7 @@
                                 </div>
                             </div>
                             <div class="control-right">
-                                <img src="/img/p2-3.png" alt="Супермаркет">
+                                <img src="/img/lenta.jpeg" alt="Супермаркет">
                             </div>
                         </div>
                         <div class="control__row">
@@ -703,7 +703,7 @@
             </div>
         </section>
 
-        <section class="call">
+        <section class="call" id="contact">
             <div class="container">
                 <h2 class="title-h2 title-h2--call">Перезвоним, даже<br> если вы в Австралии</h2>
                 <div class="call__wrap">
@@ -731,14 +731,14 @@
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="22" height="36" transform="matrix(1 0 0 -1 0 36)" fill="#22C144" />
                             </svg>
-                            <p class="call__text">+7(812) 949-50-50</p>
+                            <a href="tel:+78129495050" class="call__text">+7(812) 949-50-50</a>
                         </div>
                         <div class="call__wrap-bottom-item">
                             <svg class="call__svg call__svg--marginLeft4" width="22" height="22" viewBox="0 0 22 22"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="22" height="22" transform="matrix(1 0 0 -1 0 22)" fill="#22C144" />
                             </svg>
-                            <p class="call__text">info@estate-m.com</p>
+                            <a href="mailto:info@estate-m.com" class="call__text">info@estate-m.com</a>
                         </div>
                         <!-- <div class="left-svg">
 							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -804,7 +804,7 @@
                                 d="M19.3426 17.1458C19.6693 17.1458 19.8327 17.045 19.8872 16.8434C20.105 16.8938 20.4862 16.8938 20.6496 16.9946C20.4862 17.297 19.506 17.3978 19.1791 17.3978C19.0702 17.3978 19.0157 17.4483 19.0157 17.5491C19.0157 17.6499 19.0702 17.7003 19.1792 17.7003C19.6149 17.7003 20.9765 17.549 20.9765 16.9946V16.9442C20.9765 16.5913 20.7586 16.3393 20.4863 16.1376C20.1595 15.936 19.7238 15.8352 19.2336 15.7344C19.1247 15.7344 19.0702 15.7848 19.0702 15.8856C19.0702 15.9864 19.1247 16.0369 19.2336 16.0369C19.6693 16.0873 20.0506 16.1881 20.3229 16.3393C20.4318 16.4401 20.5407 16.5409 20.5952 16.6417C20.4863 16.6417 20.4318 16.5913 20.3229 16.5913C19.9287 16.5104 19.5279 16.4598 19.1247 16.4401C18.7435 16.4401 18.7979 17.1458 19.3426 17.1458Z"
                                 fill="white" />
                         </svg>
-                        Сделано в «Клинике доброго маркетолога»‎
+                        «Клиника доброго маркетолога»‎
                     </a>
                 </div>
             </div>
@@ -833,26 +833,20 @@
     <div class="modal-wrapper hidden animation">
         <div class="modal-wrapper__callback hidden animation">
             <button class="modal-wrapper__close">
-                <svg width="25" height="25" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="26.713" y1="9.83421" x2="10.803" y2="25.7441" stroke="#C4C4C4" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></line>
-                    <line x1="26.5918" y1="25.7129" x2="11" y2="10.1212" stroke="#C4C4C4" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round"></line>
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 24.5L24.5 1" stroke="white" />
+                    <path d="M1 0.999999L24.5 24.5" stroke="white" />
                 </svg>
             </button>
             <div class="modal-wrapper__callback-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti minus placeat sequi esse sed
-                    perspiciatis illum itaque at ipsa, eveniet excepturi! Atque, provident fuga nobis excepturi
-                    dignissimos dicta aut labore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis
-                    autem cumque, corrupti ipsam deserunt aspernatur odit distinctio neque minus saepe eum tempora ab et
-                    magnam earum praesentium delectus voluptate. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Et exercitationem animi dolorem odio provident. Eius ipsa ipsam repellendus id non! Inventore
-                    temporibus ex quibusdam reiciendis optio maiores natus ullam sit! Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Unde deleniti tempore quos cupiditate! Nobis quo nulla enim ipsum. Qui
-                    in minus voluptatem itaque numquam corporis rerum eveniet repudiandae illo dolorem! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. At ab culpa tempora odio maxime, repudiandae aliquid,
-                    praesentium neque sunt, libero numquam? Corrupti architecto deleniti rerum necessitatibus suscipit
-                    unde, aut aliquid! Lorem ipsum, dolor sit </p>
+                <h4 class="modal-title">Оставьте заявку и мы свяжемся с вами в течение 15 минут</h4>
+                <form class="callback-form__modal">
+                    <input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
+                    <input class="callback-form__input" placeholder="Телефон" required autocomplete="off" name="tel">
+                    <button class="callback-form__btn" type="submit">Перезвоните мне</button>
+                </form>
+                <p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                    сайта</p>
             </div>
         </div>
         <div class="modal-wrapper__left-menu hidden animation">
@@ -878,9 +872,44 @@
                             <a class="header__link header__link--menu" href="#">Проекты</a>
                             <a class="header__link header__link--menu" href="#">Контакты</a>
                         </nav>
-                        <button class="btn btn--header btn--menu">Нанять нас</button>
+                        <button class="btn btn--header btn--menu openCallback">Нанять нас</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__opinion hidden animation">
+            <h2 class="opinion-title">Узнайте мнение о нашей работе у действующих клиентов</h2>
+            <div class="modal-wrapper__opinion--form">
+                <button class="modal-wrapper__close">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 24.5L24.5 1" stroke="white" />
+                        <path d="M1 0.999999L24.5 24.5" stroke="white" />
+                    </svg>
+                </button>
+                <div class="modal-wrapper__opinion-body">
+                    <h4 class="modal-title">Оставьте заявку и мы свяжемся с вами для передачи контактов собственника
+                    </h4>
+                    <form class="opinion-form__modal">
+                        <input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
+                        <input class="callback-form__input" placeholder="Телефон" required autocomplete="off"
+                            name="tel">
+                        <button class="callback-form__btn" type="submit">Перезвоните мне</button>
+                    </form>
+                    <p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой
+                            конфиденциальности</a>
+                        сайта</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper__success hidden animation">
+            <button class="modal-wrapper__close">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 24.5L24.5 1" stroke="white" />
+                    <path d="M1 0.999999L24.5 24.5" stroke="white" />
+                </svg>
+            </button>
+            <div class="modal-wrapper__success-body">
+                <h2>Заявка успешно отправлена!</h2>
             </div>
         </div>
         <div class="modal-wrapper__bg"></div>

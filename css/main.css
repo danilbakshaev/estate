@@ -417,8 +417,8 @@ img {
 
 .modal-wrapper__close {
   position: absolute;
-  right: -30px;
-  top: -5px;
+  right: -27px;
+  top: -25px;
   width: 25px;
   height: 25px;
   background: none;
@@ -451,18 +451,24 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(65, 65, 65, 0.9);
+  background: #040D2A;
+  opacity: .9;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
 .modal-wrapper__callback {
-  max-width: 500px;
+  max-width: 440px;
   margin: 1.75rem auto;
-  background-color: #fff;
   position: relative;
   transition: all 0.3s linear;
+  background: #0E1839;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
 }
 
 .modal-wrapper__callback.hidden {
@@ -471,7 +477,6 @@ img {
 
 .modal-wrapper__callback.animation {
   opacity: 0;
-  transform: translateY(-100px);
 }
 
 .modal-wrapper__left-menu {
@@ -488,6 +493,125 @@ img {
 
 .modal-wrapper__left-menu.animation {
   transform: translateX(-100px);
+}
+
+.modal-wrapper__opinion {
+  margin: 1.75rem auto;
+  position: relative;
+  transition: all 0.3s linear;
+  border-radius: 4px;
+  max-width: 440px;
+}
+
+.modal-wrapper__opinion.hidden {
+  display: none;
+}
+
+.modal-wrapper__opinion.animation {
+  opacity: 0;
+}
+
+.modal-wrapper__success {
+  margin: 1.75rem auto;
+  position: relative;
+  transition: all 0.3s linear;
+  border-radius: 4px;
+  max-width: 440px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  background: #0E1839;
+}
+
+.modal-wrapper__success.hidden {
+  display: none;
+}
+
+.modal-wrapper__success.animation {
+  opacity: 0;
+}
+
+.modal-wrapper__opinion--form {
+  background: #0E1839;
+  position: relative;
+  margin: 60px auto 0;
+}
+
+.modal-wrapper__callback-body {
+  text-align: center;
+  padding: 45px 70px;
+}
+
+.modal-wrapper__opinion-body {
+  text-align: center;
+  padding: 45px 60px;
+}
+
+.modal-wrapper__success-body {
+  text-align: center;
+  padding: 45px 50px;
+}
+
+.modal-title {
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0;
+  font-weight: 400;
+}
+
+.callback-form__modal {
+  margin-top: 40px;
+}
+
+.callback-form__input {
+  margin-bottom: 44px;
+  background: none;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0 21px 0 10px;
+  height: 40px;
+  width: 100%;
+}
+
+.callback-form__input::placeholder {
+  color: #656C7F;
+}
+
+.callback-form__btn {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #000000;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+
+.callback-legal {
+  margin: 40px 0 0;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.callback-legal a {
+  color: #fff;
+  text-decoration-skip-ink: none;
+}
+
+.opinion-form__modal {
+  margin-top: 35px;
+}
+
+.opinion-title {
+  text-align: center;
+  max-width: 720px;
+  margin: 90px auto 0;
+  line-height: 130%;
+  letter-spacing: 0.03em;
 }
 
 /* Контейнер */
@@ -695,6 +819,31 @@ img {
 
   .btn--menu {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .modal-wrapper__close {
+    right: 0;
+  }
+
+  .modal-wrapper__opinion-body {
+    padding: 20px 25px;
+  }
+
+  .modal-wrapper__callback-body {
+    padding: 20px 25px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal-wrapper__opinion--form {
+    width: 90%;
+  }
+
+  .modal-wrapper__callback {
+    width: 90%;
   }
 }
 
@@ -1755,7 +1904,7 @@ img {
 
 .control-left {
   margin-right: 140px;
-  max-width: 435px;
+  max-width: 436px;
 }
 
 .control-left__title {
@@ -1807,6 +1956,10 @@ img {
 
 .control__wrap:last-child {
   margin-bottom: 0;
+}
+
+.control-right img {
+  max-width: 655px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -3037,7 +3190,9 @@ img {
   }
 }
 
-
+.green-text {
+  letter-spacing: 3px;
+}
 
 /* ANIMATE */
 
@@ -3049,41 +3204,42 @@ img {
 .animate-1 .bounce-1 {
   animation-name: bounce;
   animation-duration: .4s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-2 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.1s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-3 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-4 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.3s;
+  animation-delay: 0.8s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-5 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.4s;
+  animation-delay: 0.9s;
   animation-fill-mode: forwards;
 }
 
 .animate-1 .bounce-6 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -3097,265 +3253,266 @@ img {
 .animate-2 .bounce-1 {
   animation-name: bounce;
   animation-duration: .4s;
+  animation-delay: 0.07s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-2 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.03s;
+  animation-delay: 0.08s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-3 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.06s;
+  animation-delay: 0.11s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-4 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.09s;
+  animation-delay: 0.14s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-5 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.12s;
+  animation-delay: 0.17s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-6 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.15s;
+  animation-delay: 0.20s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-7 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.18s;
+  animation-delay: 0.23s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-8 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.21s;
+  animation-delay: 0.26s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-9 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.24s;
+  animation-delay: 0.29s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-10 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.27s;
+  animation-delay: 0.32s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-11 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.3s;
+  animation-delay: 0.35s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-12 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.33s;
+  animation-delay: 0.38s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-13 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.36s;
+  animation-delay: 0.41s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-14 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.39s;
+  animation-delay: 0.44s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-15 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.42s;
+  animation-delay: 0.47s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-16 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.45s;
+  animation-delay: 0.50s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-17 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.48s;
+  animation-delay: 0.53s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-18 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.51s;
+  animation-delay: 0.56s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-19 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.54s;
+  animation-delay: 0.59s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-20 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.57s;
+  animation-delay: 0.62s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-21 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.6s;
+  animation-delay: 0.65s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-22 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.63s;
+  animation-delay: 0.68s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-23 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.66s;
+  animation-delay: 0.71s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-24 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.69s;
+  animation-delay: 0.74s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-25 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.72s;
+  animation-delay: 0.77s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-26 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.75s;
+  animation-delay: 0.80s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-27 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.78s;
+  animation-delay: 0.83s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-28 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.81s;
+  animation-delay: 0.86s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-29 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.84s;
+  animation-delay: 0.89s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-30 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.87s;
+  animation-delay: 0.92s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-31 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.90s;
+  animation-delay: 0.95s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-32 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.93s;
+  animation-delay: 0.98s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-33 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.96s;
+  animation-delay: 1.01s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-34 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.99s;
+  animation-delay: 1.04s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-35 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 1.02s;
+  animation-delay: 1.07s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-36 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 1.05s;
+  animation-delay: 1.1s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .bounce-37 {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 1.08s;
+  animation-delay: 1.15s;
   animation-fill-mode: forwards;
 }
 
 .animate-2 .swipe-1 {
   animation-name: swipe-left;
   animation-duration: .4s;
-  animation-delay: 1.11s;
+  animation-delay: 1.18s;
   animation-fill-mode: forwards;
 }
 
@@ -3369,20 +3526,21 @@ img {
 .animate-3 .bounce-1 {
   animation-name: bounce;
   animation-duration: 0.7s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
 }
 
 .animate-3 .arrow-1 {
   animation-name: arrow-top;
   animation-duration: 0.4s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
 
 .animate-3 .arrow-2 {
   animation-name: arrow-bottom;
   animation-duration: 0.4s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
 
@@ -3390,6 +3548,7 @@ img {
 .ques__svg ellipse,
 .ques__svg rect {
   opacity: 0;
+  animation-delay: 0.7s;
   animation-play-state: paused;
 }
 
@@ -3398,7 +3557,7 @@ img {
 .ques__svg rect {
   animation-name: bounce;
   animation-duration: .4s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
 
@@ -3407,31 +3566,32 @@ img {
   animation-play-state: paused;
   animation-name: height-size;
   animation-duration: 0.6s;
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
 }
+
 .object__svg .rect-2 {
   opacity: 0;
   animation-play-state: paused;
   animation-name: height-size;
   animation-duration: 0.6s;
-  animation-delay: 0.6s;
+  animation-delay: 1.01s;
   animation-fill-mode: forwards;
 }
+
 .object__svg .rect-3 {
   opacity: 0;
   animation-play-state: paused;
   animation-name: height-size;
   animation-duration: 0.6s;
-  animation-delay: 1s;
+  animation-delay: 1.05s;
   animation-fill-mode: forwards;
 }
 
 .animate-start circle,
 .animate-start ellipse,
-.animate-start rect
-{
-  animation-play-state: running!important;
+.animate-start rect {
+  animation-play-state: running !important;
 }
 
 @keyframes height-size {
@@ -3439,6 +3599,7 @@ img {
     transform: translateY(50px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;

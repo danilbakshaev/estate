@@ -64,8 +64,46 @@ $(function () {
   }).trigger('resize');
 
   //Валидатор форм и маска для форм
-  if ('.callback-form') {
+  if ($('.callback-form')) {
     const callbackForm = $('.callback-form')
+    callbackForm.submit(function (e) {
+      e.preventDefault()
+    })
+
+    callbackForm.validate({
+      errorElement: "",
+      errorPlacement: (error, element) =>
+        error.appendTo(element.parent().parent()),
+      rules: {
+        tel: {
+          maskRu: true
+        }
+      },
+      messages: {
+        name: "",
+        tel: ""
+      },
+      submitHandler: function (form) {
+        const formInstance = $(form)
+
+        console.log('submit')
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: formInstance.serialize()
+        }).done(function () {
+          console.log('DONE')
+          formInput.val("");
+          // formInput.siblings().removeClass('active')
+          // $('.modal-wrapper-offer .success-message').addClass('show')
+        });
+        return false;
+      }
+    });
+  }
+
+  if ($('.callback-form__modal')) {
+    const callbackForm = $('.callback-form__modal')
     callbackForm.submit(function (e) {
       e.preventDefault()
     })
@@ -140,6 +178,44 @@ $(function () {
     });
   }
 
+  if ($('.opinion-form__modal')) {
+    const opinionForm = $('.opinion-form__modal')
+    opinionForm.submit(function (e) {
+      e.preventDefault()
+    })
+
+    opinionForm.validate({
+      errorElement: "",
+      errorPlacement: (error, element) =>
+        error.appendTo(element.parent().parent()),
+      rules: {
+        tel: {
+          maskRu: true
+        }
+      },
+      messages: {
+        name: "",
+        tel: ""
+      },
+      submitHandler: function (form) {
+        const formInstance = $(form)
+
+        console.log('submit')
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: formInstance.serialize()
+        }).done(function () {
+          console.log('DONE')
+          formInput.val("");
+          // formInput.siblings().removeClass('active')
+          // $('.modal-wrapper-offer .success-message').addClass('show')
+        });
+        return false;
+      }
+    });
+  }
+
   jQuery.validator.addMethod('maskRu', function (value, element) {
     console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
     return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
@@ -149,35 +225,80 @@ $(function () {
     autoclear: false
   });
 
+  $(".header__menu").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+
 });
 
 //Модальные окна на Pure Js
 (function () {
 
   //Вызов окна колбека
-  // openCallback = document.querySelector('.openCallback');
-  // callbackModal = document.querySelector('.modal-wrapper__callback');
 
-  // openCallback.addEventListener('click', function () {
-  //   openBaseModal();
-  //   callbackModal.classList.remove('hidden');
-  //   setTimeout(function () {
-  //     callbackModal.classList.remove('animation');
-  //   }, 20);
-  // })
+  if (document.querySelector('.openCallback')) {
 
-  // function closecallbackPopup() {
-  //   if (!callbackModal.classList.contains('hidden')) {
-  //     callbackModal.classList.add('animation');    
-  //     callbackModal.addEventListener('transitionend', function(e) {
-  //       callbackModal.classList.add('hidden');
-  //     }, {
-  //       capture: false,
-  //       once: true,
-  //       passive: false
-  //     });
-  //   }
-  // };
+    openCallback = document.querySelectorAll('.openCallback');
+    callbackModal = document.querySelector('.modal-wrapper__callback');
+
+    for (let i = 0; i < openCallback.length; i++) {
+      openCallback[i].addEventListener('click', function () {
+        openBaseModal();
+        callbackModal.classList.remove('hidden');
+        setTimeout(function () {
+          callbackModal.classList.remove('animation');
+        }, 20);
+      })
+
+      function closecallbackPopup() {
+        if (!callbackModal.classList.contains('hidden')) {
+          callbackModal.classList.add('animation');
+          callbackModal.addEventListener('transitionend', function (e) {
+            callbackModal.classList.add('hidden');
+          }, {
+            capture: false,
+            once: true,
+            passive: false
+          });
+        }
+      };
+    }
+  }
+
+  if (document.querySelector('.openOpinion')) {
+
+    openOpinion = document.querySelectorAll('.openOpinion');
+    opinionModal = document.querySelector('.modal-wrapper__opinion');
+
+    for (let i = 0; i < openOpinion.length; i++) {
+      openOpinion[i].addEventListener('click', function () {
+        openBaseModal();
+        opinionModal.classList.remove('hidden');
+        setTimeout(function () {
+          opinionModal.classList.remove('animation');
+        }, 20);
+      })
+
+      function closeOpinionModal() {
+        if (!opinionModal.classList.contains('hidden')) {
+          opinionModal.classList.add('animation');
+          opinionModal.addEventListener('transitionend', function (e) {
+            opinionModal.classList.add('hidden');
+          }, {
+            capture: false,
+            once: true,
+            passive: false
+          });
+        }
+      };
+    }
+  }
+
 
   //Вызов окна колбека
   openLeftMenu = document.querySelector('.openMenu');
@@ -205,9 +326,41 @@ $(function () {
 
   };
 
+  openSuccess = document.querySelector('.openSuccess');
+  successModal = document.querySelector('.modal-wrapper__success');
+
+  openSuccess.addEventListener('click', function () {
+    openBaseModal();
+    successModal.classList.remove('hidden');
+    setTimeout(function () {
+      successModal.classList.remove('animation');
+    }, 20);
+  })
+
+  function closeSuccessModal() {
+    if (!successModal.classList.contains('hidden')) {
+      successModal.classList.add('animation');
+      successModal.addEventListener('transitionend', function (e) {
+        successModal.classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+    }
+
+  };
+
   function closeAllModal() {
-    // closecallbackPopup();
+    if (document.querySelector('.openCallback')) {
+      closecallbackPopup();
+    }
+    closecallbackPopup();
     closeleftMenuModal();
+    if (document.querySelector('.openOpinion')) {
+      closeOpinionModal();
+    }
+    closeSuccessModal();
     closeBaseModal();
   };
 
@@ -257,22 +410,24 @@ $(function () {
 })();
 
 jQuery.fn.extend({
-  onAppearanceAddClass: function(class_to_add) {
-    var $window = $( window ),
-        window_height = $window.height(),
-        array_of_$elements = [];
-    this.each(function(i,el) {
-      array_of_$elements.push($( el ));
+  onAppearanceAddClass: function (class_to_add) {
+    var $window = $(window),
+      window_height = $window.height(),
+      array_of_$elements = [];
+    this.each(function (i, el) {
+      array_of_$elements.push($(el));
     })
     scrollHandler();
-		if (array_of_$elements.length) {
+    if (array_of_$elements.length) {
       $window.on('resize', resizeHandler).on('resize', scrollHandler).on('scroll', scrollHandler);
     }
+
     function resizeHandler() {
       window_height = $window.height();
     }
+
     function watchProcessedElements(array_of_indexes) {
-    	var l, i;
+      var l, i;
       for (l = array_of_indexes.length, i = l - 1; i > -1; --i) {
         array_of_$elements.splice(array_of_indexes[i], 1);
       }
@@ -280,12 +435,13 @@ jQuery.fn.extend({
         $window.off('resize', resizeHandler).off('scroll', scrollHandler).off('resize', scrollHandler);
       }
     }
+
     function scrollHandler() {
       var i, l, processed = [];
-      for ( l = array_of_$elements.length, i = 0; i < l; ++i ) {
+      for (l = array_of_$elements.length, i = 0; i < l; ++i) {
         if ($window.scrollTop() + window_height > array_of_$elements[i].offset().top) {
           array_of_$elements[i].addClass(class_to_add);
-          processed.push(i); 
+          processed.push(i);
         }
       }
       if (processed.length) {
