@@ -826,6 +826,7 @@ img {
 
   .modal-wrapper__close {
     right: 0;
+
   }
 
   .modal-wrapper__opinion-body {
@@ -833,7 +834,7 @@ img {
   }
 
   .modal-wrapper__callback-body {
-    padding: 20px 25px;
+    padding: 40px 25px;
   }
 }
 
@@ -978,6 +979,9 @@ img {
   color: #fff;
   padding: 0 24px;
   border-radius: 4px;
+}
+.input-hidden {
+  /* display: none; */
 }
 
 .callback-input::placeholder {
@@ -2406,6 +2410,11 @@ img {
   left: auto;
   right: 0;
   bottom: 0;
+  transition: all ease .9s;
+  transform: translate(-50%, -50%);
+}
+.ques__text--legal.animate-start::after {
+  transform: translate(0, 0);
 }
 
 .ques__subtext--legal {

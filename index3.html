@@ -52,17 +52,11 @@
                                 полное сопровождение сделки и постоянный контакт с собственником</p>
                         </div>
                     </div>
-                    <!-- <div class="managment__item">
-                        <p class="managment-text managment-text--green managment-text--marginLeft0"><svg width="228" height="67"
-                            viewBox="0 0 228 67" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            
-                        </svg> увеличим рентабельность объекта на 15%</p>
-						<p class="deal__subtext deal__subtext--margin0">Коммерческой недвижимостью по агентскому
-							договору</p>
-					</div> -->
+
                     <div class="managment__item managment__item--spaceBetween">
                         <form class="callback-form">
                             <p class="callback-title">Экспресс-оценка объекта</p>
+                            <input type="hidden" name="name-form" value="Экспресс-оценка объекта">
                             <input class="callback-input" type="text" placeholder="Имя" name="name" required
                                 autocomplete="off">
                             <input class="callback-input" type="tel" placeholder="Телефон" placeholder="Телефон"
@@ -219,7 +213,7 @@
                 </h3>
                 <p class="save__text-right save__text-right--margin">Точный процент рассчитывается после оценки объекта
                 </p>
-                <button class="btn btn--form btn--widthAuto">Экспресс-оценка бесплатно</button>
+                <button class="btn btn--form btn--widthAuto openCallback">Экспресс-оценка бесплатно</button>
             </div>
         </section>
 
@@ -593,6 +587,7 @@
                 <div class="call__wrap">
                     <div class="call__wrap-top">
                         <form class="call__form">
+                            <input type="hidden" name="name-form" value="Перезвоним, даже если вы в Австралии">
                             <input class="callback-input callback-input--mod" type="text" placeholder="Имя" name="name"
                                 required autocomplete="off">
                             <input class="callback-input callback-input--mod" type="tel" placeholder="Телефон"
@@ -679,133 +674,105 @@
                         </svg>
                     </a>
                 </div>
-                <div class="footer__item footer__item--2">
-                    <a class="footer__text footer__text--link footer__text--kdm" href='#'>
-                        <svg width="43" height="37" viewBox="0 0 43 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M41.6398 13.4276C41.3375 13.2111 40.9596 13.0667 40.5817 12.9223C38.1635 5.27001 30.6819 0 22.3691 0C11.8647 0 3.32514 8.15764 3.32514 18.1923C3.32514 18.9142 3.40074 19.6362 3.47628 20.358C1.90159 21.7757 0.753381 23.5706 0.151137 25.5559L0 25.989L0.45341 25.8447C0.755684 25.7724 1.05796 25.6281 1.3603 25.5559C2.41832 25.1949 3.55188 24.834 4.5343 24.5452C7.33042 31.62 14.4341 36.3846 22.3691 36.3846C32.8735 36.3846 41.413 28.227 41.413 18.1923C41.413 17.687 41.413 17.1094 41.3374 16.6041C42.1687 16.3153 42.6977 16.0266 42.8489 15.5934L42.9244 15.5212V15.449C42.9244 15.3768 43 15.3046 43 15.1602C43.0001 14.5827 42.5466 13.933 41.6398 13.4276ZM14.8875 9.16834L14.8119 8.51861L14.7363 8.30201L14.5096 7.79666L14.3584 7.65228L13.905 7.07477L13.7539 6.93039L13.3005 6.35288L13.1494 6.13628C13.1494 6.13628 12.9982 5.91968 12.9982 5.77531C13.3761 4.83682 16.4745 4.40368 20.3286 4.40368C22.8225 4.40368 25.5431 4.54806 28.1125 4.90904C30.6063 5.27001 32.8734 5.70315 34.3849 6.28066C35.4429 6.71379 36.0475 7.14699 36.0475 7.65228C35.8207 8.15763 35.4429 8.51861 35.1406 8.87953C34.6115 9.45704 34.1581 10.0346 33.8559 10.9009C27.9613 9.81808 21.1599 9.38488 14.9631 9.60148H14.8875C14.9035 9.50323 14.9288 9.40658 14.9631 9.31272L14.8875 9.16834ZM17.0791 15.5212C17.2302 15.2325 17.3814 15.0881 17.6081 14.8715C18.0416 14.4574 18.5938 14.1755 19.195 14.0612C19.7962 13.947 20.4194 14.0056 20.9857 14.2297C21.552 14.4538 22.0361 14.8333 22.3766 15.3202C22.7172 15.8071 22.8989 16.3795 22.8989 16.9651C22.8989 17.5506 22.7172 18.1231 22.3766 18.6099C22.0361 19.0968 21.552 19.4763 20.9857 19.7004C20.4194 19.9245 19.7962 19.9831 19.195 19.8689C18.5938 19.7547 18.0416 19.4727 17.6081 19.0586C16.928 18.4089 16.5501 17.3982 16.7768 16.4597L16.8524 16.171C16.9046 15.9476 16.9806 15.7298 17.0791 15.5212ZM14.4341 14.0773C14.2074 14.5105 14.0562 15.1602 13.9807 15.6655C12.9983 15.4489 12.0159 15.3046 11.1846 15.088C8.08617 14.2939 6.12133 13.4998 6.04573 12.7779C8.01057 12.3448 11.4113 12.1282 15.4921 12.2004C15.0387 12.7058 14.6608 13.4276 14.4341 14.0773ZM14.283 20.2858C11.2601 20.2858 8.76626 20.8633 6.65028 21.7297C4.5343 22.596 2.79613 23.8233 1.05802 25.1227C0.906885 25.1949 0.755749 25.1949 0.680148 25.2671C1.38818 23.1255 2.79089 21.2546 4.68543 19.9249C6.87701 18.3367 9.97542 17.1094 14.1318 16.3153H14.3586V15.7378C14.6608 15.7378 15.0387 15.7378 15.341 15.81C15.6433 15.8823 15.9455 15.9544 16.2479 16.171C16.0211 17.3261 16.3235 18.4811 17.2303 19.3475C18.5906 20.6469 20.9333 20.6469 22.2935 19.3475C23.6538 18.048 23.6538 15.81 22.2935 14.5106C20.9333 13.2112 18.7417 13.2112 17.3058 14.4384C16.928 14.294 16.4746 14.1497 16.0967 14.0053C15.7188 13.9331 15.341 13.9331 14.9631 13.9331C15.2654 13.2833 15.5677 12.7058 15.9455 12.2005C18.7417 12.2727 21.8401 12.4171 24.9385 12.6336C25.3164 12.6336 25.6942 12.7058 25.9966 12.7058C25.6943 14.0053 25.392 15.2325 24.9385 16.4598C24.4851 17.6149 24.0317 18.6977 23.5027 19.564C23.2004 20.0693 22.8226 20.5025 22.4447 21.0078C22.0668 21.441 21.689 21.9463 21.2355 22.3795C19.1951 24.1121 16.7012 24.4007 14.2074 23.9677C14.1318 23.8955 14.0562 23.7511 13.9806 23.6789L13.7539 23.2458V23.1014H13.6028C13.5617 23.1063 13.5201 23.1023 13.4808 23.0898C13.4416 23.0773 13.4058 23.0566 13.376 23.0292H13.1493C12.9982 23.0292 12.847 22.957 12.6959 22.957H10.2777C10.0982 22.9501 9.91894 22.9746 9.74868 23.0292H9.52194C9.3708 23.0292 9.14407 23.1014 8.99293 23.1014H8.76619C8.61506 23.1014 8.38832 23.1736 8.23718 23.1736L8.01044 23.2458C7.90463 23.2427 7.79997 23.2677 7.70817 23.3181H7.55703L7.3303 23.3903C7.17916 23.3903 7.02802 23.4624 6.87688 23.4624H6.65015C6.49901 23.4624 6.34787 23.5347 6.27227 23.5347L6.04553 23.6069C5.8944 23.6069 5.8188 23.6791 5.66766 23.6791L5.36558 23.8233C5.22545 23.826 5.09114 23.8773 4.98771 23.9677L4.76097 24.0399C4.00529 24.2565 3.32514 24.473 2.56939 24.6896C3.92969 23.7511 5.28998 22.8848 6.95255 22.1629C8.99299 21.2966 11.4112 20.7191 14.3585 20.7191C14.5097 20.7191 14.5852 20.6469 14.5852 20.5025C14.5096 20.358 14.4341 20.2858 14.283 20.2858ZM26.8278 15.6655C26.9789 15.7378 27.0545 15.6655 27.1301 15.5933C27.3568 15.2323 27.4323 14.8714 27.5835 14.3661C27.659 13.9329 27.7346 13.4276 27.8102 12.8501C28.1125 12.8501 28.3392 12.9223 28.6415 12.9223C28.0369 17.1094 27.2812 21.4409 24.1072 24.8339C23.2759 25.7724 22.2935 26.4222 21.2355 26.9275C19.8752 27.505 17.8347 27.7938 16.3234 27.505C15.7188 27.3607 15.3409 27.0719 15.1142 26.7831C14.9602 26.5448 14.8815 26.2691 14.8875 25.989C15.5641 26.2307 16.2811 26.353 17.0034 26.35C17.6836 26.2778 18.2881 26.1334 19.195 25.7725C19.3462 25.7003 19.3462 25.6281 19.3462 25.4837C19.2706 25.3394 19.195 25.3394 19.0439 25.3394C18.2126 25.6281 17.608 25.8447 17.0034 25.8447C16.3988 25.8447 15.7187 25.7725 14.8119 25.4837C14.5096 25.3394 14.2828 25.1228 14.2073 24.9062C14.1317 24.7205 14.1317 24.5144 14.2073 24.3287C17.2302 24.9062 19.724 24.3287 21.6889 22.6683C21.84 22.5961 21.9156 22.4517 22.0667 22.3795C22.8649 21.6038 23.5511 20.7298 24.1072 19.7806V19.564V19.3474L24.1828 19.2752L24.2584 19.1308L24.334 19.0586C24.4096 18.9864 24.4096 18.9142 24.4851 18.7698C24.7874 18.1201 25.1653 17.326 25.392 16.5319C25.809 15.3467 26.1622 14.142 26.45 12.9223L26.5256 12.7057C26.8279 12.7057 27.0546 12.7779 27.3569 12.7779C27.2813 13.3554 27.2058 13.8608 27.1302 14.2218C27.0546 14.6549 26.9034 15.0159 26.7523 15.3768C26.6766 15.449 26.6766 15.5934 26.8278 15.6655ZM29.9262 29.1654L30.0773 31.0424L21.6133 35.8793H21.5378L21.7645 35.6627C23.4271 33.7857 25.1652 31.9809 26.6766 29.9595C27.3568 29.021 28.0369 28.1547 28.7171 27.1441L28.7927 27.0718V26.8552L28.8683 26.783L28.9439 26.7108C29.4731 25.9167 30.002 25.0504 30.5309 24.1119C30.682 23.8953 30.8331 23.6787 30.9087 23.39L31.2866 24.4728L31.4377 25.0504L32.6469 28.8043L30.0775 28.8765H29.8506L29.9262 29.1654ZM15.5677 32.1253L15.4165 31.1868L17.1546 29.9596L16.6256 33.136L16.3234 34.8686C16.2478 34.8686 16.1722 34.7964 16.0211 34.7964L15.5677 32.1253ZM15.5677 34.652C14.9631 34.4354 14.4341 34.1467 13.8296 33.9301L15.1898 32.7029L15.5677 34.652ZM17.0791 33.2804L17.457 32.9916L17.6837 33.4248L17.2303 35.1574C17.0792 35.0852 16.928 35.0852 16.7769 35.013L17.0791 33.2804ZM17.1547 32.7029L17.457 31.0424C17.5326 31.1146 17.6081 31.259 17.6837 31.3312C17.8349 31.5478 18.0616 31.6922 18.2883 31.9087L17.1547 32.7029ZM19.1195 33.6414L19.573 32.8471L22.0668 34.5797C21.7645 34.8684 21.5378 35.1572 21.2355 35.446C21.0844 35.5904 21.0088 35.7348 20.8577 35.807C20.3286 35.7348 19.8752 35.7348 19.3462 35.6626L19.1195 33.6414ZM19.2707 32.0532C20.0264 31.981 20.7065 31.8366 21.3867 31.6922C23.276 31.1868 24.8629 30.3927 26.2232 29.2377C26.6197 28.9203 26.9981 28.5829 27.3568 28.227C26.9789 28.7323 26.6766 29.2377 26.2988 29.6708C25.9209 30.104 25.5431 30.6093 25.1652 31.0424C24.3339 32.0532 23.427 33.0638 22.5202 34.0745H22.2935L19.2707 32.0532ZM30.7575 17.9036C30.5307 19.4196 30.5307 20.8634 30.7575 22.8126C29.9262 24.2564 29.0949 25.6281 28.1125 26.7831C27.3568 27.6495 26.601 28.4436 25.6942 29.1655C24.4095 30.104 22.9736 30.8981 21.3111 31.3312C20.4705 31.5515 19.6104 31.6965 18.7417 31.7643L18.0615 31.1146C17.8621 30.9161 17.6848 30.6984 17.5325 30.4649C17.5325 30.3205 17.6081 30.2483 17.6081 30.1039C17.7593 29.4542 17.8349 28.8044 17.7593 28.1547H18.5905C18.8173 28.1547 18.9684 28.1547 19.1195 28.0825H19.3463C19.4974 28.0825 19.7242 28.0103 19.8753 28.0103L20.102 27.938C20.2532 27.8658 20.4799 27.8658 20.631 27.7937L20.8578 27.7214L21.3112 27.5048L21.5379 27.4326L21.9913 27.216L22.2181 27.0716C22.3692 26.9994 22.5203 26.855 22.6715 26.7829L22.8982 26.6385C23.0494 26.5663 23.125 26.4219 23.2761 26.3498L23.5028 26.1332C23.654 26.0609 23.7296 25.9166 23.8807 25.8444L24.1075 25.6278C24.2586 25.4834 24.3342 25.4112 24.4097 25.2668L24.6365 24.9781C24.7876 24.8337 24.8632 24.6893 25.0143 24.5449L25.2411 24.2562C26.828 22.1626 28.0372 19.2028 28.7173 15.5932C28.8685 14.7991 29.0196 14.005 29.0952 13.1387C30.0776 13.2109 31.0601 13.3553 31.967 13.4997C31.4375 15.0158 30.9842 16.4597 30.7575 17.9036ZM22.5202 35.8793L30.4551 31.3312L30.6062 31.259V31.1146L30.4551 29.382L33.0245 29.3098H33.3268L33.2512 28.9488L32.1934 25.7003L36.8788 29.1655C33.5537 33.2082 28.3392 35.8071 22.5202 35.8793ZM36.9547 16.9651C35.3677 17.1094 33.4784 17.1817 31.3624 17.1817C31.5891 16.0266 32.0426 14.7993 32.496 13.3555C36.8035 13.933 40.4309 14.655 42.3202 15.5212C41.942 16.171 39.9772 16.6763 36.9547 16.9651ZM32.7226 12.9224L32.4959 12.8501C30.1532 12.417 27.5082 12.2726 25.0899 12.1282C17.3816 11.5507 9.6734 11.4785 6.12153 12.2726C6.4994 11.3341 8.46424 10.7566 11.0336 10.3956C12.0917 10.2513 13.2252 10.1791 14.3588 10.1069H14.5099C21.3869 9.81814 30.531 10.3956 37.8614 12.3448C39.2972 12.778 40.5064 13.2112 41.3377 13.7165C42.0178 14.1496 42.4712 14.5828 42.4712 15.0159C40.5817 14.2218 36.9549 13.4999 32.7226 12.9224Z"
-                                fill="white" />
-                            <path
-                                d="M19.3426 17.1458C19.6693 17.1458 19.8327 17.045 19.8872 16.8434C20.105 16.8938 20.4862 16.8938 20.6496 16.9946C20.4862 17.297 19.506 17.3978 19.1791 17.3978C19.0702 17.3978 19.0157 17.4483 19.0157 17.5491C19.0157 17.6499 19.0702 17.7003 19.1792 17.7003C19.6149 17.7003 20.9765 17.549 20.9765 16.9946V16.9442C20.9765 16.5913 20.7586 16.3393 20.4863 16.1376C20.1595 15.936 19.7238 15.8352 19.2336 15.7344C19.1247 15.7344 19.0702 15.7848 19.0702 15.8856C19.0702 15.9864 19.1247 16.0369 19.2336 16.0369C19.6693 16.0873 20.0506 16.1881 20.3229 16.3393C20.4318 16.4401 20.5407 16.5409 20.5952 16.6417C20.4863 16.6417 20.4318 16.5913 20.3229 16.5913C19.9287 16.5104 19.5279 16.4598 19.1247 16.4401C18.7435 16.4401 18.7979 17.1458 19.3426 17.1458Z"
-                                fill="white" />
-                        </svg>
-                        «Клиника доброго маркетолога»‎
-                    </a>
-                </div>
             </div>
         </div>
     </footer>
 
-    <!-- <h3>Проверка вызова модального окна</h3>
-	<button class="openCallback">Открыть callback</button>
-	<button class="openMenu">Открыть menu</button>
-	<br>
-	<br>
-	<h3>Валидация форм</h3>
-	<form class="offer-form-modal" autocomplete="off">
-		<div>
-			<label for="name" class="">Ваше имя*</label>
-			<input name="name" id="name" type="text" class="" required >
-		</div>
-		<div>
-			<label for="tel" class="input-group__label">Телефон*</label>
-			<input name="tel" id="tel" type="tel" class="" required data-rule-required="true" data-rule-minlength="10">
-		</div>
-		<button class="" type="submit">Отправить</button>
-	</form> -->
 
-    <!-- Модальные окна -->
-    <div class="modal-wrapper hidden animation">
-        <div class="modal-wrapper__callback hidden animation">
-            <button class="modal-wrapper__close">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 24.5L24.5 1" stroke="white" />
-                    <path d="M1 0.999999L24.5 24.5" stroke="white" />
-                </svg>
-            </button>
-            <div class="modal-wrapper__callback-body">
-                <h4 class="modal-title">Оставьте заявку и мы свяжемся с вами в течение 15 минут</h4>
-                <form class="callback-form__modal">
-                    <input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
-                    <input class="callback-form__input" placeholder="Телефон" required autocomplete="off" name="tel">
-                    <button class="callback-form__btn" type="submit">Перезвоните мне</button>
-                </form>
-                <p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-                    сайта</p>
-            </div>
-        </div>
-        <div class="modal-wrapper__left-menu hidden animation">
-            <div class="modal-wrapper__left-body">
-                <div class="modal-wrapper__left-body__top">
-                    <a href="/" class="logo logo--menu">
-                        <img src="/img/logo.svg" alt="">
-                    </a>
-                    <button class="modal-wrapper__close modal-wrapper__close--menu">
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" stroke="white" />
-                            <path d="M7 7L23 23" stroke="white" />
-                            <path d="M7 23L23 7" stroke="white" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="header header--menu">
-                    <div class="header__inner header__inner--menu">
-                        <nav class="header__menu header__menu--menu">
-                            <a class="header__link header__link--menu" href="tel:+78129495050">+7 812 949-50-50</a>
-                            <a class="header__link header__link--menu" href="#">Принципы</a>
-                            <a class="header__link header__link--menu" href="#">Цена</a>
-                            <a class="header__link header__link--menu" href="#">Проекты</a>
-                            <a class="header__link header__link--menu" href="#">Контакты</a>
-                        </nav>
-                        <button class="btn btn--header btn--menu openCallback">Нанять нас</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-wrapper__opinion hidden animation">
-            <h2 class="opinion-title">Узнайте мнение о нашей работе у действующих клиентов</h2>
-            <div class="modal-wrapper__opinion--form">
-                <button class="modal-wrapper__close">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 24.5L24.5 1" stroke="white" />
-                        <path d="M1 0.999999L24.5 24.5" stroke="white" />
-                    </svg>
-                </button>
-                <div class="modal-wrapper__opinion-body">
-                    <h4 class="modal-title">Оставьте заявку и мы свяжемся с вами для передачи контактов собственника
-                    </h4>
-                    <form class="opinion-form__modal">
-                        <input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
-                        <input class="callback-form__input" placeholder="Телефон" required autocomplete="off"
-                            name="tel">
-                        <button class="callback-form__btn" type="submit">Перезвоните мне</button>
-                    </form>
-                    <p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой
-                            конфиденциальности</a>
-                        сайта</p>
-                </div>
-            </div>
-        </div>
-        <div class="modal-wrapper__success hidden animation">
-            <button class="modal-wrapper__close">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 24.5L24.5 1" stroke="white" />
-                    <path d="M1 0.999999L24.5 24.5" stroke="white" />
-                </svg>
-            </button>
-            <div class="modal-wrapper__success-body">
-                <h2>Заявка успешно отправлена!</h2>
-            </div>
-        </div>
-        <div class="modal-wrapper__bg"></div>
-    </div>
+	<!-- Модальные окна -->
+	<div class="modal-wrapper hidden animation">
+		<div class="modal-wrapper__callback hidden animation">
+			<button class="modal-wrapper__close">
+				<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 24.5L24.5 1" stroke="white" />
+					<path d="M1 0.999999L24.5 24.5" stroke="white" />
+				</svg>
+			</button>
+			<div class="modal-wrapper__callback-body">
+				<h4 class="modal-title">Оставьте заявку и мы свяжемся с вами в течение 15 минут</h4>
+				<form class="callback-form__modal">
+					<input type="hidden" name="name-form" value="Модальное окно">
+					<input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
+					<input class="callback-form__input" placeholder="Телефон" required autocomplete="off" name="tel">
+					<button class="callback-form__btn" type="submit">Перезвоните мне</button>
+				</form>
+				<p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+					сайта</p>
+			</div>
+		</div>
+		<div class="modal-wrapper__left-menu hidden animation">
+			<div class="modal-wrapper__left-body">
+				<div class="modal-wrapper__left-body__top">
+					<a href="/" class="logo logo--menu">
+						<img src="/img/logo.svg" alt="">
+					</a>
+					<button class="modal-wrapper__close modal-wrapper__close--menu">
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="0.5" y="0.5" width="29" height="29" rx="3.5" stroke="white" />
+							<path d="M7 7L23 23" stroke="white" />
+							<path d="M7 23L23 7" stroke="white" />
+						</svg>
+					</button>
+				</div>
+				<div class="header header--menu">
+					<div class="header__inner header__inner--menu">
+						<nav class="header__menu header__menu--menu">
+							<a class="header__link header__link--menu" href="tel:+78129495050">+7 812 949-50-50</a>
+							<a class="header__link header__link--menu" href="#">Принципы</a>
+							<a class="header__link header__link--menu" href="#">Цена</a>
+							<a class="header__link header__link--menu" href="#">Проекты</a>
+							<a class="header__link header__link--menu" href="#">Контакты</a>
+						</nav>
+						<button class="btn btn--header btn--menu openCallback">Нанять нас</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-wrapper__opinion hidden animation">
+			<h2 class="opinion-title">Узнайте мнение о нашей работе у действующих клиентов</h2>
+			<div class="modal-wrapper__opinion--form">
+				<button class="modal-wrapper__close">
+					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 24.5L24.5 1" stroke="white" />
+						<path d="M1 0.999999L24.5 24.5" stroke="white" />
+					</svg>
+				</button>
+				<div class="modal-wrapper__opinion-body">
+					<h4 class="modal-title">Оставьте заявку и мы свяжемся с вами для передачи контактов собственника
+					</h4>
+					<form class="opinion-form__modal">
+						<input type="hidden" name="name-form" value="Отзыв">
+						<input class="callback-form__input" placeholder="Имя" required autocomplete="off" name="name">
+						<input class="callback-form__input" placeholder="Телефон" required autocomplete="off"
+							name="tel">
+						<button class="callback-form__btn" type="submit">Перезвоните мне</button>
+					</form>
+					<p class="callback-legal">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой
+							конфиденциальности</a>
+						сайта</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-wrapper__success hidden animation">
+			<button class="modal-wrapper__close">
+				<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 24.5L24.5 1" stroke="white" />
+					<path d="M1 0.999999L24.5 24.5" stroke="white" />
+				</svg>
+			</button>
+			<div class="modal-wrapper__success-body">
+				<h2>Заявка успешно отправлена!</h2>
+			</div>
+		</div>
+		<div class="modal-wrapper__bg"></div>
+	</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./libs/jquery_validate/jquery.validate.min.js"></script>
-    <script src="./libs/jquery-maskedinput/jquery.maskedinput.js"></script>
-    <script src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="./libs/jquery_validate/jquery.validate.min.js"></script>
+	<script src="./libs/jquery-maskedinput/jquery.maskedinput.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

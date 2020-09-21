@@ -86,16 +86,14 @@ $(function () {
       submitHandler: function (form) {
         const formInstance = $(form)
 
-        console.log('submit')
         $.ajax({
           type: "POST",
           url: "mail.php",
           data: formInstance.serialize()
         }).done(function () {
-          console.log('DONE')
-          formInput.val("");
-          // formInput.siblings().removeClass('active')
-          // $('.modal-wrapper-offer .success-message').addClass('show')
+          formInput.val("")
+          closeAllModal()
+          openSuccessModal()
         });
         return false;
       }
@@ -132,8 +130,8 @@ $(function () {
         }).done(function () {
           console.log('DONE')
           formInput.val("");
-          // formInput.siblings().removeClass('active')
-          // $('.modal-wrapper-offer .success-message').addClass('show')
+          closeAllModal()
+          openSuccessModal()
         });
         return false;
       }
@@ -170,8 +168,8 @@ $(function () {
         }).done(function () {
           console.log('DONE')
           formInput.val("");
-          // formInput.siblings().removeClass('active')
-          // $('.modal-wrapper-offer .success-message').addClass('show')
+          closeAllModal()
+          openSuccessModal()
         });
         return false;
       }
@@ -208,15 +206,15 @@ $(function () {
         }).done(function () {
           console.log('DONE')
           formInput.val("");
-          // formInput.siblings().removeClass('active')
-          // $('.modal-wrapper-offer .success-message').addClass('show')
+          closeAllModal()
+          openSuccessModal()
         });
         return false;
       }
     });
   }
 
-  jQuery.validator.addMethod('maskRu', function (value, element) {
+  jQuery.validator.addMethod('maskRu', function(value, element) {
     console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
     return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
   });
@@ -234,10 +232,7 @@ $(function () {
     }, 1500);
   });
 
-});
 
-//Модальные окна на Pure Js
-(function () {
 
   //Вызов окна колбека
 
@@ -326,16 +321,15 @@ $(function () {
 
   };
 
-  openSuccess = document.querySelector('.openSuccess');
   successModal = document.querySelector('.modal-wrapper__success');
 
-  openSuccess.addEventListener('click', function () {
+  function openSuccessModal() {
     openBaseModal();
     successModal.classList.remove('hidden');
     setTimeout(function () {
       successModal.classList.remove('animation');
     }, 20);
-  })
+  }
 
   function closeSuccessModal() {
     if (!successModal.classList.contains('hidden')) {
@@ -348,8 +342,8 @@ $(function () {
         passive: false
       });
     }
-
   };
+
 
   function closeAllModal() {
     if (document.querySelector('.openCallback')) {
@@ -407,7 +401,7 @@ $(function () {
     }
   };
 
-})();
+});
 
 jQuery.fn.extend({
   onAppearanceAddClass: function (class_to_add) {
@@ -452,3 +446,4 @@ jQuery.fn.extend({
   }
 })
 $('.animate').onAppearanceAddClass('animate-start');
+$('.ques__text--legal').onAppearanceAddClass('animate-start');
