@@ -12,53 +12,68 @@ $(function () {
       // Если слайдер не запущен
       if (init != 1) {
         // Запускаем слайдер и записываем в data init-slider = 1
-        $('#saveSlider').slick({
-          arrows: false,
-          prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
-          nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
-          dots: true,
-          infinite: false,
-          slidesToShow: 1.5,
-          responsive: [{
-            breakpoint: 740,
-            settings: {
+        if ($('#saveSlider')) {
+          if (!$('#saveSlider').hasClass('slick-initialized')) {
+            $('#saveSlider').slick({
+              arrows: false,
+              prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
+              nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
+              dots: true,
+              infinite: false,
               slidesToShow: 1.5,
-              slidesToScroll: 1,
-            },
-            breakpoint: 500,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
-          }, ]
-        }).data({
-          'init-slider': 1
-        });
-        $('.control-slider').slick({
-          arrows: false,
-          prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
-          nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
-          dots: true,
-          infinite: false,
-          slidesToShow: 1
-        }).data({
-          'init-slider': 1
-        });
-        $('.rent-list__inner--slider').slick({
-          arrows: false,
-          dots: false,
-          infinite: false,
-          slidesToShow: 2,
-          responsive: [{
-            breakpoint: 690,
-            settings: {
-              slidesToShow: 1.2,
-              slidesToScroll: 1,
-            }
-          }, ]
-        }).data({
-          'init-slider': 1
-        });
+              responsive: [{
+                breakpoint: 740,
+                settings: {
+                  slidesToShow: 1.5,
+                  slidesToScroll: 1,
+                },
+                breakpoint: 500,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              }, ]
+            }).data({
+              'init-slider': 1
+            });
+          }
+        }
+
+        if ($('.control-slider')) {
+          if (!$('.control-slider').hasClass('slick-initialized')) {
+            $('.control-slider').slick({
+              arrows: false,
+              prevArrow: '<button type="button" class="slide-prev sale__slider-prev">Previous</button>',
+              nextArrow: '<button type="button" class="slide-next sale__slider-next">Next</button>',
+              dots: true,
+              infinite: false,
+              slidesToShow: 1
+            }).data({
+              'init-slider': 1
+            });
+          }
+        }
+
+        if ($('.rent-list__inner--slider')) {
+          if (!$('.rent-list__inner--slider').hasClass('slick-initialized')) {
+            $('.rent-list__inner--slider').slick({
+              arrows: false,
+              dots: false,
+              infinite: false,
+              slidesToShow: 2,
+              responsive: [{
+                breakpoint: 690,
+                settings: {
+                  slidesToShow: 1.2,
+                  slidesToScroll: 1,
+                }
+              }, ]
+            }).data({
+              'init-slider': 1
+            });
+          }
+        }
+
       }
     }
   }).trigger('resize');
@@ -214,7 +229,7 @@ $(function () {
     });
   }
 
-  jQuery.validator.addMethod('maskRu', function(value, element) {
+  jQuery.validator.addMethod('maskRu', function (value, element) {
     console.log(/\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value));
     return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
   });
@@ -223,7 +238,7 @@ $(function () {
     autoclear: false
   });
 
-  $(".header__menu").on("click", "a", function (event) {
+  $(".header__menu").on("click", "a[href^='#']", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;

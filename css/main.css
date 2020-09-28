@@ -980,6 +980,7 @@ img {
   padding: 0 24px;
   border-radius: 4px;
 }
+
 .input-hidden {
   /* display: none; */
 }
@@ -1951,7 +1952,7 @@ img {
 }
 
 .control__wrap {
-  margin-bottom: 330px;
+  margin-bottom: 160px;
 }
 
 .control-left__wrap {
@@ -2005,6 +2006,12 @@ img {
 
   .control-right {
     order: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .control-right img {
+    max-height: 435px;
   }
 
   .control__inner {
@@ -2413,6 +2420,7 @@ img {
   transition: all ease .9s;
   transform: translate(-50%, -50%);
 }
+
 .ques__text--legal.animate-start::after {
   transform: translate(0, 0);
 }
@@ -2620,6 +2628,8 @@ img {
   font-size: 24px;
   line-height: 150%;
   color: #FFFFFF;
+  display: flex;
+  align-items: flex-end;
 }
 
 .deal__subtext {
@@ -2673,6 +2683,18 @@ img {
   padding-right: 15px;
 }
 
+@media screen and (max-width: 1440px) {
+  .deal__text {
+    min-height: 108px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .deal__text {
+    min-height: 144px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .deal__right {
     display: none;
@@ -2700,6 +2722,7 @@ img {
 
   .deal__text {
     margin-top: 0;
+    min-height: unset;
   }
 
   .title-h3--deal {
@@ -3186,10 +3209,6 @@ img {
     margin-right: 0;
   }
 
-  .control__img {
-    display: none !important;
-  }
-
   .control__left--dispNone {
     display: none;
   }
@@ -3201,6 +3220,13 @@ img {
 
 .green-text {
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 380px) {
+
+  .green-text {
+    letter-spacing: unset;
+  }
 }
 
 /* ANIMATE */
