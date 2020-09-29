@@ -3749,3 +3749,18 @@ img {
     ry: 10;
   }
 }
+
+.text-page {
+  padding: 70px;
+}
+
+.text-page__p {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.text-page__ul {
+  padding-left: 16px;
+}
+
+.text-page__li {}
