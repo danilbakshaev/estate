@@ -981,10 +981,6 @@ img {
   border-radius: 4px;
 }
 
-.input-hidden {
-  /* display: none; */
-}
-
 .callback-input::placeholder {
   color: #656C7F;
 }
@@ -3763,4 +3759,8 @@ img {
   padding-left: 16px;
 }
 
-.text-page__li {}
+.phone-fix {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
