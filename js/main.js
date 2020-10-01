@@ -234,9 +234,11 @@ $(function () {
     return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
   });
 
-  $('[name="tel"]').mask("+7(999)999-9999", {
+  if ($('[name="tel"]')) {
+    $('[name="tel"]').mask("+7(999)999-9999", {
     autoclear: false
   });
+  }
 
   $(".header__menu").on("click", "a[href^='#']", function (event) {
     event.preventDefault();
