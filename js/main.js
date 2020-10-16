@@ -78,6 +78,9 @@ $(function () {
     }
   }).trigger('resize');
 
+  var formInput = $('.callback-input');
+  var modalFormInput = $('.callback-form__input');
+
   //Валидатор форм и маска для форм
   if ($('.callback-form')) {
     const callbackForm = $('.callback-form')
@@ -107,7 +110,7 @@ $(function () {
           data: formInstance.serialize()
         }).done(function () {
           formInput.val("")
-          closeAllModal()
+          closecallbackPopup()
           openSuccessModal()
         });
         return false;
@@ -144,8 +147,8 @@ $(function () {
           data: formInstance.serialize()
         }).done(function () {
           console.log('DONE')
-          formInput.val("");
-          closeAllModal()
+          modalFormInput.val("");
+          closecallbackPopup()
           openSuccessModal()
         });
         return false;
@@ -183,7 +186,6 @@ $(function () {
         }).done(function () {
           console.log('DONE')
           formInput.val("");
-          closeAllModal()
           openSuccessModal()
         });
         return false;
@@ -220,8 +222,8 @@ $(function () {
           data: formInstance.serialize()
         }).done(function () {
           console.log('DONE')
-          formInput.val("");
-          closeAllModal()
+          modalFormInput.val("");
+          closeOpinionModal()
           openSuccessModal()
         });
         return false;
@@ -366,7 +368,6 @@ $(function () {
     if (document.querySelector('.openCallback')) {
       closecallbackPopup();
     }
-    closecallbackPopup();
     closeleftMenuModal();
     if (document.querySelector('.openOpinion')) {
       closeOpinionModal();
