@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -1804,10 +1804,6 @@ img {
     background: none;
   }
 
-  .move__subtitle {
-    margin-bottom: 0;
-  }
-
   .move__subtitle--second {
     line-height: 35px;
   }
@@ -1817,9 +1813,6 @@ img {
     font-weight: 700;
   }
 
-  .move__text {
-    display: none;
-  }
 }
 
 
@@ -1921,7 +1914,7 @@ img {
 }
 
 .btn--control {
-  margin: 50px 0 0;
+  margin: 31px 0 0;
   width: 286px;
   height: 39px;
 }
@@ -1992,7 +1985,7 @@ img {
   }
 
   .btn--control {
-    margin: 30px 0 0;
+    margin: 11px 0 30px;
   }
 
   .control-left__wrap {
@@ -2486,6 +2479,10 @@ img {
   margin-left: 0;
 }
 
+.managment-text br {
+  display: none;
+}
+
 .managment__inner--width100 {
   width: 100%;
 }
@@ -2563,12 +2560,15 @@ img {
   .animation-svg {
     display: none;
   }
+
+  .managment-text br {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 755px) {
   .deal__subtext--max756 {
-    margin: 0;
-    /* margin-top: 33px; */
+    margin: 15px 0 0;
   }
 }
 

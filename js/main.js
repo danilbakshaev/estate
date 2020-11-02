@@ -243,6 +243,7 @@ $(function () {
   }
 
   $(".header__menu").on("click", "a[href^='#']", function (event) {
+    closeAllModal();
     event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -262,6 +263,7 @@ $(function () {
 
     for (let i = 0; i < openCallback.length; i++) {
       openCallback[i].addEventListener('click', function () {
+        closeleftMenuModal();
         openBaseModal();
         callbackModal.classList.remove('hidden');
         setTimeout(function () {
