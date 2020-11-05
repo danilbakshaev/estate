@@ -2027,7 +2027,11 @@ img {
     width: 100%;
   }
 }
-
+@media screen and (max-width: 670px) {
+  .control__wrap {
+    margin: 0 5px;
+  }
+}
 /* footer */
 
 .footer__inner {
